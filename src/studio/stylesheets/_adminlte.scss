@@ -1,0 +1,55 @@
+/*!
+ *   AdminLTE v2.3.5
+ *   Author: Almsaeed Studio
+ *	 Website: Almsaeed Studio <http://almsaeedstudio.com>
+ *   License: Open source - MIT
+ *           Please visit http://opensource.org/licenses/MIT for more information
+!*/
+//google fonts
+//@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
+//MISC
+//----
+@import "~angular-sass-adminlte/src/stylesheets/core";
+@import "~angular-sass-adminlte/src/stylesheets/mixins";
+//COMPONENTS
+//-----------
+@import "~angular-sass-adminlte/src/stylesheets/header";
+@import "~angular-sass-adminlte/src/stylesheets/sidebar";
+@import "~angular-sass-adminlte/src/stylesheets/sidebar-mini";
+@import "~angular-sass-adminlte/src/stylesheets/control-sidebar";
+@import "~angular-sass-adminlte/src/stylesheets/dropdown";
+@import "~angular-sass-adminlte/src/stylesheets/forms";
+@import "~angular-sass-adminlte/src/stylesheets/progress-bars";
+@import "~angular-sass-adminlte/src/stylesheets/small-box";
+@import "~angular-sass-adminlte/src/stylesheets/boxes";
+@import "~angular-sass-adminlte/src/stylesheets/info-box";
+@import "~angular-sass-adminlte/src/stylesheets/timeline";
+@import "~angular-sass-adminlte/src/stylesheets/buttons";
+@import "~angular-sass-adminlte/src/stylesheets/callout";
+@import "~angular-sass-adminlte/src/stylesheets/alerts";
+@import "~angular-sass-adminlte/src/stylesheets/navs";
+@import "~angular-sass-adminlte/src/stylesheets/products";
+@import "~angular-sass-adminlte/src/stylesheets/table";
+@import "~angular-sass-adminlte/src/stylesheets/labels";
+@import "~angular-sass-adminlte/src/stylesheets/direct-chat";
+@import "~angular-sass-adminlte/src/stylesheets/users-list";
+@import "~angular-sass-adminlte/src/stylesheets/carousel";
+@import "~angular-sass-adminlte/src/stylesheets/modal";
+@import "~angular-sass-adminlte/src/stylesheets/social-widgets";
+//PAGES
+//------
+@import "~angular-sass-adminlte/src/stylesheets/mailbox";
+@import "~angular-sass-adminlte/src/stylesheets/lockscreen";
+@import "~angular-sass-adminlte/src/stylesheets/login_and_register";
+@import "~angular-sass-adminlte/src/stylesheets/404_500_errors";
+@import "~angular-sass-adminlte/src/stylesheets/invoice";
+@import "~angular-sass-adminlte/src/stylesheets/profile";
+//Plugins
+//--------
+@import "~angular-sass-adminlte/src/stylesheets/bootstrap-social";
+@import "~angular-sass-adminlte/src/stylesheets/fullcalendar";
+@import "~angular-sass-adminlte/src/stylesheets/select2";
+//Miscellaneous
+//-------------
+@import "~angular-sass-adminlte/src/stylesheets/miscellaneous";
+@import "~angular-sass-adminlte/src/stylesheets/print";

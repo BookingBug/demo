@@ -1,0 +1,25 @@
+// Font awesome
+@import './stylesheets/font-awesome.scss';
+
+#bb {
+  @import "./stylesheets/bootstrap-variables";
+  @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+  @import "./stylesheets/bb-variables";
+  @import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+  //// BB SDK styles
+  @import "~bookingbug-angular/src/public-booking/main";
+
+  // Bespoke project styles
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+
+  // All custom styles and overrides should be stored in the following .scss file:
+  @import "./stylesheets/client_theme";
+}
+
+@import '~bookingbug-angular/src/core/_stylesheets/project_version';

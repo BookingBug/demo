@@ -1,0 +1,28 @@
+<h1>overridden</h1>
+<div bb-checkout>
+
+  <div ng-if="total.$has('new_payment')">
+
+    <h1 translate="PUBLIC_BOOKING.CHECKOUT.STEP_HEADING"></h1>
+
+    <div bb-include="public-booking/templates/_basket_item_summary"></div>
+
+    <h2
+      class="booking-form-header"
+      translate="PUBLIC_BOOKING.CHECKOUT.PAYMENT_DETAILS_HEADING">
+    </h2>
+
+    <div class="bb-checkout-pay-button">
+      <div
+        bb-payment-button
+        class="btn btn-primary"
+        total="total"
+        bb="bb"
+        decide-next-page="decideNextPage"
+        value="PUBLIC_BOOKING.CHECKOUT.PAY_BTN">
+      </div>
+    </div>
+
+  </div>
+
+</div>

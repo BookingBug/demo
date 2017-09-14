@@ -1,0 +1,34 @@
+@import "./stylesheets/bootstrap-variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "./stylesheets/adminlte-variables";
+@import "./stylesheets/bb-variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "./stylesheets/adminlte";
+
+#bb {
+
+  @import "~bookingbug-angular/src/core/main";
+  @import "~bookingbug-angular/src/member/main";
+  @import "~bookingbug-angular/src/public-booking/main";
+  @import "~bookingbug-angular/src/admin-booking/main";
+
+  // Bespoke project styles
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+  a {
+    text-decoration: none;
+  }
+
+  // All custom styles and overrides should be stored in the following .scss file:
+  @import "./stylesheets/client_theme";
+}
+
+// Font awesome
+@import './stylesheets/font-awesome.scss';
+@import "~bookingbug-angular/src/admin-dashboard/main";
+
+@import '~bookingbug-angular/src/core/_stylesheets/project_version';

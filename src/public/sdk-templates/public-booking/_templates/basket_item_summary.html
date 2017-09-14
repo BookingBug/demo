@@ -1,0 +1,83 @@
+<h1>OVERRIDEN</h1>
+<div class="bb-item-summary">
+  <div class="bb-item-summary-header">
+    <div class="bb-item-summary-header-text hidden-xs">
+      <h3 aria-label="{{bb.current_item.service.name}}"  tabindex="0">{{bb.current_item.service.name}}</h3>
+    </div>
+  </div>
+  <ul class="bb-item-summary-list">
+    <li class="visible-xs bb-confirmation-summary-item" tabindex="0">
+      <div
+        class="bb-summary-label"
+        translate="PUBLIC_BOOKING.BASKET_ITEM_SUMMARY.SERVICE_LBL">
+      </div>
+      <div aria-label="{{bb.current_item.service.name}}" class="bb-summary-value">{{bb.current_item.service.name}}
+      </div>
+    </li>
+    <li tabindex="0"
+      class="bb-confirmation-summary-item"
+      ng-show="bb.current_item.duration">
+      <div
+        class="bb-summary-label"
+        translate="PUBLIC_BOOKING.BASKET_ITEM_SUMMARY.DURATION_LBL">
+      </div>
+      <div class="bb-summary-value">
+        <span  aria-label="{{bb.current_item.duration | time_period}}">{{bb.current_item.duration | time_period}}</span>
+      </div>
+    </li>
+    <li tabindex="0"
+      class="bb-confirmation-summary-item"
+      ng-show="bb.current_item.resource && bb.current_item.resource.name">
+      <div
+        class="bb-summary-label"
+        translate="PUBLIC_BOOKING.BASKET_ITEM_SUMMARY.RESOURCE_LBL">
+      </div>
+      <div class="bb-summary-value">
+        <span>{{bb.current_item.resource.name}}</span>
+      </div>
+    </li>
+    <li tabindex="0"
+      class="bb-confirmation-summary-item"
+      ng-show="bb.current_item.person && bb.current_item.person.name">
+      <div
+        class="bb-summary-label"
+        translate="PUBLIC_BOOKING.BASKET_ITEM_SUMMARY.PERSON_LBL"></div>
+      <div class="bb-summary-value">
+        <span>{{bb.current_item.person.name}}</span>
+      </div>
+    </li>
+    <li tabindex="0"
+      class="bb-confirmation-summary-item"
+      ng-show="bb.current_item.price">
+      <div
+        class="bb-summary-label"
+        translate="PUBLIC_BOOKING.BASKET_ITEM_SUMMARY.PRICE_LBL"></div>
+      <div class="bb-summary-value">
+        <span>{{bb.current_item.price | currency}}</span>
+      </div>
+    </li>
+    <li tabindex="0"
+      class="bb-confirmation-summary-item"
+      ng-show="bb.current_item.date">
+      <div
+        class="bb-summary-label"
+        translate="PUBLIC_BOOKING.BASKET_ITEM_SUMMARY.DATE_LBL">
+      </div>
+      <div class="bb-summary-value">
+        <span>{{bb.current_item.startDatetime() | datetime: 'dddd D MMMM'}}</span>
+      </div>
+    </li>
+    <li tabindex="0"
+      class="bb-confirmation-summary-item"
+      ng-show="bb.current_item.time">
+      <div
+        class="bb-summary-label"
+        translate="PUBLIC_BOOKING.BASKET_ITEM_SUMMARY.TIME_LBL">
+      </div>
+      <div class="bb-summary-value">
+        <span>{{bb.current_item.startDatetime() | datetime: 'LT'}}</span>
+      </div>
+    </li>
+  </ul>
+  <div class="clearfix"></div>
+</div>
