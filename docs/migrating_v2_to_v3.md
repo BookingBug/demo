@@ -4,13 +4,13 @@
 
 We want to keep all projects created for one client inside one repository.  
 
-If you're migrating a bespoke 'studio' project, take  [v3_template/src/studio](v3_template/src/studio) as an example.
-If you're migrating a bespoke 'public booking' project, take  [v3_template/src/public-booking](v3_template/src/public-booking) as an example.
+If you're migrating a bespoke 'studio' project, take  [studio](https://github.com/BookingBug/demo/tree/master/src/studio) as an example.
+If you're migrating a bespoke 'public' project, take  [public](https://github.com/BookingBug/demo/tree/master/src/public) as an example.
 Migration of any other type of project should be very similar to the above.
 
 For the purpose of this example migration, let's assume we're migrating an existing 'studio' project: 
  - PROJECT_ROOT is a path leading to the existing v2 'studio' project we want to migrate
- - EXAMPLE_ROOT is a path leading to the example v3 'studio' project [v3_template/src/studio](v3_template/src/studio) we want to use as a guide for migration.
+ - EXAMPLE_ROOT is a path leading to the example v3 '[studio](https://github.com/BookingBug/demo/tree/master/src/studio) we want to use as a guide for migration.
  
  
 1) Move all existing directories from PROJECT_ROOT/src into new directory PROJECT_ROOT/src/studio.  

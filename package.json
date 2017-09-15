@@ -13,8 +13,8 @@
     "il": "sh ./helpers/local_sdk.sh"
   },
   "dependencies": {
-    "bookingbug-angular": "3.0.0-39",
-    "animate.css": "~3.5.2"
+    "bookingbug-angular": "3.0.0-41",
+    "angular": "~1.5.11"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",

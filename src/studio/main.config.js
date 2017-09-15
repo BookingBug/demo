@@ -38,7 +38,7 @@ function moduleConfig(AdminCheckInOptionsProvider,
 
     // AdminLoginOptionsProvider.setOption('sso_token', 'eyJlbWFpbCI6ImFkbWluMUBleGFtcGxlLmNvbSJ9');
     // AdminLoginOptionsProvider.setOption('company_id', '37000');
-    AdminLoginOptionsProvider.setOption('show_api_field', false);
+    AdminLoginOptionsProvider.setOption('show_api_field', true);
 
     /*AdminCalendarOptionsProvider.setOption('minTime', '00:00');
      AdminCalendarOptionsProvider.setOption('maxTime', '24:00');*/
