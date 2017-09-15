@@ -59,6 +59,8 @@ module.exports = {
 
         "quotes": ["error", "single"],
 
-        "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }]
+        "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
+
+        "prefer-const": ["error", { "destructuring": "all", "ignoreReadBeforeAssign": true }]
     }
 };

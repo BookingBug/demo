@@ -127,7 +127,7 @@ For the purpose of this example migration, let's assume we're migrating an exist
 18) Please move PROJECT_ROOT/src/studio/stylesheets/main.scss to PROJECT_ROOT/src/studio/main.scss.
 
 
-19) Make sure your PROJECT_ROOT/src/studio/main.scss file has correct imports - compare with v3_templates/src/studio/main.scss    
+19) Make sure your PROJECT_ROOT/src/studio/main.scss file has correct imports - compare with EXAMPLE_ROOT/src/studio/main.scss    
 
     In _bootstrap-variables.scss, make sure $icon-font-path is set to following if($bootstrap-sass-asset-helper, "~bootstrap-sass/assets/fonts/bootstrap/", "/fonts/") !default; 
     
@@ -136,7 +136,7 @@ For the purpose of this example migration, let's assume we're migrating an exist
     Make sure PROJECT_ROOT/src/studio/stylesheets/_adminlte.scc has proper imports (compare with EXAMPLE_ROOT/src/studio/stylesheets/_adminlte.scc)    
 
 
-20) Compare you PROJECT_ROOT/src/studio/main.module.js with v3_templates/src/studio/main.module.js
+20) Compare you PROJECT_ROOT/src/studio/main.module.js with EXAMPLE_ROOT/src/studio/main.module.js
     Make sure you have following imports after sdk imports:
     ```javascript
     import './sdk-templates/**/*.html';
