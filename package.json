@@ -10,7 +10,9 @@
   },
   "scripts": {
     "i": "rm -rf node_modules yarn.lock && yarn install",
-    "il": "sh ./helpers/local_sdk.sh"
+    "il": "sh ./helpers/local_sdk.sh",
+    "p": "gulp --root public",
+    "s": "gulp --root studio"
   },
   "dependencies": {
     "bookingbug-angular": "3.0.0-39",
