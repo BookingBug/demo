@@ -6,13 +6,13 @@ To install required packages
 `npm run i`
 
 ### Running The Projects
-####Public booking journey
+#### Public booking journey
 
-#####Default
+##### Default
 
 `npm run p`
 
-#####Advanced
+##### Advanced
 
 `npm run p-dev`
 
@@ -20,13 +20,13 @@ To install required packages
 
 `npm run p-prod`
 
-####Studio journey
+#### Studio journey
 
-#####Default
+##### Default
 
 `npm run s`
 
-#####Advanced
+##### Advanced
 
 `npm run s-dev`
 
