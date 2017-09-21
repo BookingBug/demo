@@ -21,7 +21,7 @@
     "s-prod": "gulp --root studio --env production"
   },
   "dependencies": {
-    "bookingbug-angular": "3.0.0-41",
+    "bookingbug-angular": "git@github.com:ParanormalCoder/bookingbug-angular.git#static-versioning",
     "angular": "~1.5.11"
   },
   "devDependencies": {
