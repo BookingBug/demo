@@ -45,6 +45,7 @@ Optional flags:
 - --env
 - --uglify
 - --deployVersion
+- --noQa
 
 ### ```gulp relocate-templates```
 Move templates to new location following changes made on sdk level:  [../../src/relocate_templates.json](../../src/relocate_templates.json)
@@ -74,6 +75,11 @@ Value: [false | release version string like '0.0.13']
 If not used will be read from config.json (property 'deploy_version')
 If value is set to specific version, task will try to check out it before creating a build.
 If value is set to false, task will use current state of directory to create a build.
+
+### --noQa
+Value: true | false
+
+If set to true project will be deployed to: bespoke.bookingbug.com/{deploy_path}. Otherwise it will be deployed to bespoke.bookingbug.com/{deploy_path}/qa/{branch}. If not used defaults to false.
 
 ### --tests
 If used web server will start together with unit tests in watch mode. 
