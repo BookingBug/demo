@@ -1,25 +1,27 @@
-// Font awesome
+$icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+$brand-primary: #d21548;
+@import "./stylesheets/bootstrap-variables";
 @import './stylesheets/font-awesome.scss';
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "./stylesheets/bb-variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 
-#bb {
-  @import "./stylesheets/bootstrap-variables";
-  @import "~bootstrap-sass/assets/stylesheets/bootstrap";
-  //@import "./stylesheets/bb-variables";
-  @import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-
-  //// BB SDK styles
-  //@import "~bookingbug-angular/src/public-booking/main";
-
-  // Bespoke project styles
-  margin: 0;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $text-color;
-  background-color: $body-bg;
-
-  // All custom styles and overrides should be stored in the following .scss file:
-  @import "./stylesheets/client_theme";
+body {
+  background: whitesmoke;
+  font-family: "myriad-pro";
 }
 
-@import '~bookingbug-angular/src/core/_stylesheets/project_version';
+.btn.btn-primary--outlined {
+  @include button-variant($brand-primary, white, $brand-primary);
+}
+
+.btn.btn--rounded {
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.panel {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #e1e1e1;
+}

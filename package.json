@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "angular": "~1.5.11",
-    "bookingbug-angular": "git@github.com/ParanormalCoder/bookingbug-angular.git#static-versioning"
+    "bookingbug-angular": "file:../bookingbug-angular"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",
