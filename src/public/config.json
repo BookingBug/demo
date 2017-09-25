@@ -29,7 +29,7 @@
   "development": {
     "build": {
       "uglify": false,
-      "deploy_path": "/demo.public/development/",
+      "deploy_path": "/widget-templates-demo/development/",
       "deploy_version": false
     },
     "core": {
