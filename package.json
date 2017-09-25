@@ -21,7 +21,7 @@
     "s-prod": "gulp --root studio --env production"
   },
   "dependencies": {
-    "bookingbug-angular": "3.0.0-41",
+    "bookingbug-angular": "3.0.0",
     "angular": "~1.5.11"
   },
   "devDependencies": {
@@ -42,10 +42,9 @@
     "fs": "~0.0.1-security",
     "fs-extra": "^4.0.2",
     "fs-finder": "~1.8.1",
+    "git-config": "0.0.7",
     "git-guppy": "~2.1.0",
     "git-rev-sync": "~1.9.1",
-    "git-user-email": "~0.2.2",
-    "git-user-name": "~1.2.0",
     "github-changes": "~1.1.0",
     "gulp": "~3.9.1",
     "gulp-awspublish": "~3.3.0",
