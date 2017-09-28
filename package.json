@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "angular": "~1.5.11",
-    "bookingbug-angular": "file:../bookingbug-angular"
+    "bookingbug-angular": "file:../bookingbug-angular",
+    "webpack-require-http": "^0.4.3"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",
