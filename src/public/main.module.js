@@ -29,7 +29,7 @@ import run from './main.run';
 import versionModule from './version/version.module';
 
 export default angular
-    .module('studio', [
+    .module('public', [
         bbPublicBookingModule,
         versionModule
     ])
