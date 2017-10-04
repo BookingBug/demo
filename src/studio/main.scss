@@ -1,12 +1,11 @@
+// Stylesheets meant for overriding variables.
 @import "./stylesheets/bootstrap-variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "./stylesheets/adminlte-variables";
 @import "./stylesheets/bb-variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-@import "./stylesheets/adminlte";
 
 #bb {
 
+  // BookingBug SDK styles for studio projects.
   @import "~bookingbug-angular/src/core/main";
   @import "~bookingbug-angular/src/member/main";
   @import "~bookingbug-angular/src/public-booking/main";
@@ -23,12 +22,11 @@
     text-decoration: none;
   }
 
-  // All custom styles and overrides should be stored in the following .scss file:
+  // All custom styles and overrides should be stored in the following .scss file.
   @import "./stylesheets/client_theme";
 }
 
-// Font awesome
+// Font awesome (has to be referenced from bespoke project because of a way webpack is importing modules).
 @import './stylesheets/font-awesome.scss';
-@import "~bookingbug-angular/src/admin-dashboard/main";
 
-@import '~bookingbug-angular/src/core/_stylesheets/project_version';
+@import "~bookingbug-angular/src/admin-dashboard/main";
