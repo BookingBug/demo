@@ -3,10 +3,15 @@ if [ ! -d 'tmp' ]; then
 fi
 
 rm -rf ./tmp/package.json
-
+rm -rf ./tmp/node_modules
 node ./helpers/local_sdk_prepare.js
+
 if [ -f 'yarn.lock' ]; then
     cp  ./yarn.lock ./tmp/yarn.lock
+fi
+
+if [ -d 'node_modules' ]; then
+    mv ./node_modules ./tmp/node_modules
 fi
 
 cd ./tmp
