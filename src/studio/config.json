@@ -15,7 +15,8 @@
       "analytics": {
         "enable_piwik": false
       },
-      "company_id": "37294"
+      "company_id": "37294",
+      "theme_id": 2
     }
   },
   "local": {
