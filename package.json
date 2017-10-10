@@ -9,7 +9,7 @@
     "url": "https://...git"
   },
   "scripts": {
-    "i": "rm -rf node_modules yarn.lock && yarn install",
+    "i": "yarn install",
     "il": "sh ./helpers/local_sdk.sh",
     "p": "gulp --root public",
     "p-dev": "gulp --root public --env development",
@@ -21,8 +21,7 @@
     "s-prod": "gulp --root studio --env production"
   },
   "dependencies": {
-    "bookingbug-angular": "3.0.0",
-    "angular": "~1.5.11"
+    "bookingbug-angular": "3.0.1"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",
@@ -40,7 +39,7 @@
     "file-loader": "~0.11.2",
     "font-awesome-loader": "~1.0.2",
     "fs": "~0.0.1-security",
-    "fs-extra": "^4.0.2",
+    "fs-extra": "~4.0.2",
     "fs-finder": "~1.8.1",
     "git-config": "0.0.7",
     "git-guppy": "~2.1.0",
@@ -48,7 +47,7 @@
     "github-changes": "~1.1.0",
     "gulp": "~3.9.1",
     "gulp-awspublish": "~3.3.0",
-    "gulp-bump": "^2.7.0",
+    "gulp-bump": "~2.7.0",
     "gulp-eslint": "~4.0.0",
     "gulp-filter": "~5.0.1",
     "gulp-git": "~2.4.1",
@@ -58,7 +57,7 @@
     "gulp-rename": "~1.2.2",
     "gulp-sass-lint": "~1.3.2",
     "gulp-slack": "~0.1.2",
-    "gulp-tag-version": "^1.3.0",
+    "gulp-tag-version": "~1.3.0",
     "gulp-template": "~4.0.0",
     "gulp-util": "~3.0.8",
     "htmlhint-stylish": "~1.0.3",
