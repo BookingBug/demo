@@ -9,7 +9,7 @@
     "url": "https://...git"
   },
   "scripts": {
-    "i": "yarn install",
+    "i": "rm -rf node_modules && yarn install --force",
     "il": "sh ./helpers/local_sdk.sh",
     "p": "gulp --root public",
     "p-dev": "gulp --root public --env development",

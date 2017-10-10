@@ -1319,8 +1319,9 @@ bonjour@^3.5.0:
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
 
-"bookingbug-angular@file:../../bookingbug-angular":
-  version "3.0.1"
+bookingbug-angular@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/bookingbug-angular/-/bookingbug-angular-3.0.2.tgz#4a529977dae42b5d2ab03ae8c3c5ee418a555bcd"
   dependencies:
     accounting "~0.4.1"
     airbrake-js "~0.5.8"
@@ -5717,7 +5718,6 @@ moment-timezone@~0.5.13:
   resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.13.tgz#99ce5c7d827262eb0f1f702044177f60745d7b90"
   dependencies:
     moment ">= 2.9.0"
-
 
 "moment@>= 2.6.0", "moment@>= 2.9.0", "moment@>=2.8.0 <3.0.0", moment@^2.9.0, moment@~2.18.1:
   version "2.18.1"

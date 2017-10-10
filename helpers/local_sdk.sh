@@ -4,18 +4,15 @@ fi
 
 rm -rf ./tmp/package.json
 rm -rf ./tmp/node_modules
+rm -rf ./node_modules
 node ./helpers/local_sdk_prepare.js
 
 if [ -f 'yarn.lock' ]; then
     cp  ./yarn.lock ./tmp/yarn.lock
 fi
 
-if [ -d 'node_modules' ]; then
-    mv ./node_modules ./tmp/node_modules
-fi
-
 cd ./tmp
-yarn
+yarn install --force
 cd ..
 
 mv ./tmp/node_modules ./node_modules
