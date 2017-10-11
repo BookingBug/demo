@@ -9,7 +9,7 @@
     "url": "https://...git"
   },
   "scripts": {
-    "i": "rm -rf node_modules yarn.lock && yarn install",
+    "i": "rm -rf ./node_modules/bookingbug-angular && yarn install --force",
     "il": "sh ./helpers/local_sdk.sh",
     "p": "gulp --root public",
     "p-dev": "gulp --root public --env development",
@@ -21,8 +21,7 @@
     "s-prod": "gulp --root studio --env production"
   },
   "dependencies": {
-    "bookingbug-angular": "3.0.0",
-    "angular": "~1.5.11"
+    "bookingbug-angular": "3.0.2"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",

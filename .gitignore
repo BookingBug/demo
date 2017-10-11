@@ -8,5 +8,4 @@ tmp/**
 test/unit/reports
 
 yarn-error.log
-yarn.lock
 /npm-debug.log
