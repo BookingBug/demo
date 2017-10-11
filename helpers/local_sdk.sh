@@ -2,9 +2,8 @@ if [ ! -d 'tmp' ]; then
     mkdir 'tmp'
 fi
 
-rm -rf ./tmp/package.json
-rm -rf ./tmp/node_modules
-rm -rf ./node_modules
+rm -rf ./tmp/package.json ./tmp/node_modules ./tmp/yarn.lock
+mv ./node_modules ./tmp/node_modules
 node ./helpers/local_sdk_prepare.js
 
 if [ -f 'yarn.lock' ]; then
@@ -12,6 +11,7 @@ if [ -f 'yarn.lock' ]; then
 fi
 
 cd ./tmp
+rm -rf ./node_modules/bookingbug-angular
 yarn install --force
 cd ..
 
