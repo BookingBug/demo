@@ -43,10 +43,9 @@
     "fs": "~0.0.1-security",
     "fs-extra": "^4.0.2",
     "fs-finder": "~1.8.1",
+    "git-config": "0.0.7",
     "git-guppy": "~2.1.0",
     "git-rev-sync": "~1.9.1",
-    "git-user-email": "~0.2.2",
-    "git-user-name": "~1.2.0",
     "github-changes": "~1.1.0",
     "gulp": "~3.9.1",
     "gulp-awspublish": "~3.3.0",
@@ -64,7 +63,8 @@
     "gulp-template": "~4.0.0",
     "gulp-util": "~3.0.8",
     "htmlhint-stylish": "~1.0.3",
-    "import-glob-loader": "~1.1.0",
+    "import-glob": "^1.5.0",
+    "import-glob-loader": "^1.1.0",
     "include-all": "~4.0.3",
     "inquirer": "~3.2.1",
     "isparta": "~4.0.0",
@@ -100,6 +100,7 @@
     "url-loader": "~0.5.9",
     "webpack": "~3.4.1",
     "webpack-dev-server": "~2.6.1",
+    "webpack-require-http": "^0.4.3",
     "yargs": "~8.0.2"
   }
 }

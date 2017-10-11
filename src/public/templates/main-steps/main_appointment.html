@@ -3,12 +3,13 @@
   <div bb-form-data-store></div>
 
   <div ng-init="setRoute([
-    {page:'public-booking/map/v2/map.html', title: 'Select a store', layoutVersion: 1},
-    {page:'public-booking/_templates/steps/service_list', title: 'Select a service'},
-    {page:'public-booking/_templates/steps/calendar', title: 'Select a date'},
-    {page:'public-booking/item-details/v2/item_details.html', title: 'Client'},
-    {page:'public-booking/_templates/steps/check_items', title: 'Review'},
-    {page:'public-booking/_templates/steps/checkout', title: 'Confirmation'}
+    {page:'public-booking/map/v2/map.html', title: 'Select a store', layoutVersion: 1, name: 'map'},
+    {page:'public-booking/services/v2/service_list.html', title: 'Select a service', name: 'service-list'},
+    {page:'public-booking/_templates/steps/calendar', title: 'Select a date', name: 'calendar'},
+    {page:'public-booking/check-items/v2/check-items.html', title: 'Client', name: 'check-items'},
+    {page:'public-booking/basket-summary/v2/basket-summary.html', title: 'Summary', name: 'basket-summary'},
+    {page:'public-booking/confirmation/v2/confirmation.html', title: 'Confirmation', name: 'confirmation'},
+    {page:'public-booking/checkout/v2/checkout.html', title: 'Confirmation', name: 'checkout'}
     ])">
   </div>
 
