@@ -1319,9 +1319,9 @@ bonjour@^3.5.0:
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
 
-bookingbug-angular@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/bookingbug-angular/-/bookingbug-angular-3.0.2.tgz#4a529977dae42b5d2ab03ae8c3c5ee418a555bcd"
+bookingbug-angular@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/bookingbug-angular/-/bookingbug-angular-3.0.3.tgz#bdf2223371d4583d0f4d137966c8708bf0a95226"
   dependencies:
     accounting "~0.4.1"
     airbrake-js "~0.5.8"
