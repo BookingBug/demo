@@ -843,6 +843,10 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
+babel-plugin-module-rewrite@~0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-module-rewrite/-/babel-plugin-module-rewrite-0.2.0.tgz#5d7e6c31e3bad6ce3a0ef723983af245b96fdc84"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -1319,9 +1323,8 @@ bonjour@^3.5.0:
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
 
-bookingbug-angular@3.0.3:
+"bookingbug-angular@file:../../bookingbug-angular":
   version "3.0.3"
-  resolved "https://registry.yarnpkg.com/bookingbug-angular/-/bookingbug-angular-3.0.3.tgz#bdf2223371d4583d0f4d137966c8708bf0a95226"
   dependencies:
     accounting "~0.4.1"
     airbrake-js "~0.5.8"
@@ -2771,7 +2774,7 @@ eslint@^2.7.0:
     text-table "~0.2.0"
     user-home "^2.0.0"
 
-eslint@^4.0.0:
+eslint@^4.0.0, eslint@^4.8.0:
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.8.0.tgz#229ef0e354e0e61d837c7a80fdfba825e199815e"
   dependencies:
@@ -5859,9 +5862,9 @@ ng-file-upload@~12.2.13:
   version "12.2.13"
   resolved "https://registry.yarnpkg.com/ng-file-upload/-/ng-file-upload-12.2.13.tgz#01800f3872e526f95310f8477e99e4f12d0d8d14"
 
-"ng-scrollable@git+https://github.com/echa/ng-scrollable.git#0.2.5":
+"ng-scrollable@https://github.com/echa/ng-scrollable.git#0.2.5":
   version "0.2.5"
-  resolved "git+https://github.com/echa/ng-scrollable.git#3bc5f233c52f6e68d4b230d5f729c8cc72b0fba9"
+  resolved "https://github.com/echa/ng-scrollable.git#3bc5f233c52f6e68d4b230d5f729c8cc72b0fba9"
 
 ng-virtual-keyboard@~0.3.0:
   version "0.3.0"
