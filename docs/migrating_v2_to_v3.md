@@ -131,9 +131,9 @@ For the purpose of this example migration, let's assume we're migrating an exist
 
     In _bootstrap-variables.scss, make sure $icon-font-path is set to following if($bootstrap-sass-asset-helper, "~bootstrap-sass/assets/fonts/bootstrap/", "/fonts/") !default; 
     
-    Make sure any images|fonts are referred with leading slash in stylesheets.
-
-    Make sure PROJECT_ROOT/src/studio/stylesheets/_adminlte.scc has proper imports (compare with EXAMPLE_ROOT/src/studio/stylesheets/_adminlte.scc)    
+    Make sure any images|fonts are not referred with leading slash in stylesheets ( example: url("../_images/BB_wait.gif" ) ).
+    
+    Please remove PROJECT_ROOT/src/studio/stylesheets/_adminlte.scc as it's moved into sdk level.     
 
 
 20) Compare you PROJECT_ROOT/src/studio/main.module.js with EXAMPLE_ROOT/src/studio/main.module.js
