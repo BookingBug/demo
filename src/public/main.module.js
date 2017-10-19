@@ -3,7 +3,9 @@ import bbPublicBookingModule from 'bookingbug-angular/src/public-booking/main.mo
 // import 'bookingbug-angular/src/public-booking/globs_to_remove';//TODO remove once globs removed on sdk
 import '../../tmp/publicVersionJs'; // import the new template versions` JS files (>=v2.0)
 
-import './sdk-templates/**/*.html';
+
+//import './sdk-templates/**/*.html';
+
 import '../../tmp/config.constants';
 
 //templates
@@ -24,6 +26,7 @@ import './images/bb-logo.svg';
 import '../../tmp/publicVersionStyle'; // import the new template versions` style structure (>=v2.0)
 
 import './stylesheets/font-awesome.config'; // font awesome js settings
+
 
 // chosen angular translations
 import 'file-loader?name=angular-i18n/[name].[ext]!angular-i18n/angular-locale_en.js';
