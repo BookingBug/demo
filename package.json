@@ -12,6 +12,7 @@
     "i": "rm -rf node_modules yarn.lock && yarn install",
     "il": "sh ./helpers/local_sdk.sh",
     "p": "gulp --root public",
+    "p:secure": "gulp --root public --secure",
     "p-dev": "gulp --root public --env development",
     "p-staging": "gulp --root public --env staging",
     "p-prod": "gulp --root public --env production",
