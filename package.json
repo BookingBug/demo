@@ -21,7 +21,7 @@
     "s-prod": "gulp --root studio --env production"
   },
   "dependencies": {
-    "bookingbug-angular": "3.0.3"
+    "bookingbug-angular": "3.1.0"
   },
   "devDependencies": {
     "babel-core": "~6.25.0",
