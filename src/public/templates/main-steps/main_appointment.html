@@ -2,16 +2,29 @@
 
   <div bb-form-data-store></div>
 
+  <!-- V1 routes. Restore after imports_refactor branch is merged -->
   <div ng-init="setRoute([
-    {page:'public-booking/map/v2/map.html', title: 'Select a store', layoutVersion: 1, name: 'map'},
-    {page:'public-booking/services/v2/service_list.html', title: 'Select a service', name: 'service-list'},
-    {page:'public-booking/calendar/v2/calendar.html', title: 'Select a date', name: 'calendar'},
-    {page:'public-booking/check-items/v2/check-items.html', title: 'Client', name: 'check-items'},
-    {page:'public-booking/basket-summary/v2/basket-summary.html', title: 'Summary', name: 'basket-summary'},
-    {page:'public-booking/checkout/v2/checkout.html', title: 'Confirmation', name: 'checkout'},
-    {page:'public-booking/confirmation/v2/confirmation.html', title: 'Confirmation', name: 'confirmation'}
+    {page:'public-booking/_templates/steps/map.html', title: 'Select a store', layoutVersion: 1, name: 'map'},
+    {page:'public-booking/_templates/steps/service_list.html', title: 'Select a service', name: 'service-list'},
+    {page:'public-booking/_templates/steps/calendar.html', title: 'Select a date', name: 'calendar'},
+    {page:'public-booking/_templates/steps/check_items.html', title: 'Client', name: 'check-items'},
+    {page:'public-booking/_templates/steps/basket_summary.html', title: 'Summary', name: 'basket-summary'},
+    {page:'public-booking/_templates/steps/checkout.html', title: 'Confirmation', name: 'checkout'},
+    {page:'public-booking/_templates/steps/confirmation.html', title: 'Confirmation', name: 'confirmation'}
     ])">
   </div>
+
+
+  <!--<div ng-init="setRoute([-->
+    <!--{page:'public-booking/map/v2/map.html', title: 'Select a store', layoutVersion: 1, name: 'map'},-->
+    <!--{page:'public-booking/services/v2/service_list.html', title: 'Select a service', name: 'service-list'},-->
+    <!--{page:'public-booking/calendar/v2/calendar.html', title: 'Select a date', name: 'calendar'},-->
+    <!--{page:'public-booking/check-items/v2/check-items.html', title: 'Client', name: 'check-items'},-->
+    <!--{page:'public-booking/basket-summary/v2/basket-summary.html', title: 'Summary', name: 'basket-summary'},-->
+    <!--{page:'public-booking/checkout/v2/checkout.html', title: 'Confirmation', name: 'checkout'},-->
+    <!--{page:'public-booking/confirmation/v2/confirmation.html', title: 'Confirmation', name: 'confirmation'}-->
+    <!--])">-->
+  <!--</div>-->
 
   <!-- PROGRESSBAR -->
   <div uib-progressbar value="bb.percentage_complete || 0" type="primary"></div>

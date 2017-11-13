@@ -61,6 +61,10 @@ module.exports = {
 
         "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
 
-        "prefer-const": ["error", { "destructuring": "all", "ignoreReadBeforeAssign": true }]
+        "prefer-const": ["error", { "destructuring": "all", "ignoreReadBeforeAssign": true }],
+
+        "no-new-object": "error",
+
+        "no-var": "error"
     }
 };
