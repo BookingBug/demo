@@ -1,33 +1,19 @@
-//bootstrap
-@import "./stylesheets/bootstrap-variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-//bb
-@import "./stylesheets/bb-variables";
 @import './stylesheets/font-awesome.scss';
-@import '~bookingbug-angular/src/core/_stylesheets/project_version';
-//bb admin lte
+
+// Overrides for bootstrap variables.
+@import "./stylesheets/bootstrap-variables";
+
+// Overrides for core bookingbug variables.
+@import "./stylesheets/bb-variables";
+
+// Overrides for Admin LTE variables.
 @import "./stylesheets/adminlte-variables";
-@import "~bookingbug-angular/src/admin-dashboard/_stylesheets/admin-lte/AdminLTE.scss";
 
 #bb {
-  //bb
-  @import "~bookingbug-angular/src/core/main";
-  @import "~bookingbug-angular/src/member/main";
-  @import "~bookingbug-angular/src/public-booking/main";
-  @import "~bookingbug-angular/src/admin-booking/main";
 
-  margin: 0;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $text-color;
-  background-color: $body-bg;
-  a {
-    text-decoration: none;
-  }
-  //client
+  @import "~bookingbug-angular/src/admin-dashboard/main";
+
+  // Client theme for customization.
   @import "./stylesheets/client_theme";
-}
 
-//bb
-@import "~bookingbug-angular/src/admin-dashboard/main";
+}
