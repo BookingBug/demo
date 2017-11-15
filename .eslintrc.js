@@ -61,6 +61,25 @@ module.exports = {
 
         "arrow-parens": ["error", "as-needed", { "requireForBlockBody": true }],
 
-        "prefer-const": ["error", { "destructuring": "all", "ignoreReadBeforeAssign": true }]
+        "prefer-const": ["error", { "destructuring": "all", "ignoreReadBeforeAssign": true }],
+
+        "no-new-object": "error",
+
+        "no-var": "error",
+
+        "no-confusing-arrow": ['error', {
+            "allowParens": true,
+        }],
+        
+        "prefer-arrow-callback": ['error', {
+            "allowNamedFunctions": false,
+            "allowUnboundThis": true,
+        }],
+
+        "arrow-spacing": ['error', { "before": true, "after": true }],
+        
+        "object-shorthand": ['error', 'always', {"ignoreConstructors": false, "avoidQuotes": true,}],
+
+        "quote-props": ['error', 'as-needed', { "keywords": false, "unnecessary": true, "numbers": false }],
     }
 };
