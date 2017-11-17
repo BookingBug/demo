@@ -1,16 +1,15 @@
-//bootstrap
-@import "./stylesheets/bootstrap-variables";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-//bb
-@import "./stylesheets/bb-variables";
+// Font awesome
 @import './stylesheets/font-awesome.scss';
-@import '~bookingbug-angular/src/core/_stylesheets/project_version';
+
+// Stylesheets meant for overriding variables.
+@import "./stylesheets/bootstrap-variables";
+@import "./stylesheets/bb-variables";
 
 #bb {
-  //bb
+  // BookingBug SDK styles for public journeys projects.
   @import "~bookingbug-angular/src/public-booking/main";
 
+  // Bespoke project styles
   margin: 0;
   font-family: $font-family-base;
   font-size: $font-size-base;
@@ -18,6 +17,6 @@
   color: $text-color;
   background-color: $body-bg;
 
-  //client
+  // All custom styles and overrides should be stored in the following .scss file.
   @import "./stylesheets/client_theme";
 }
