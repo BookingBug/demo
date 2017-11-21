@@ -10,9 +10,6 @@ import './fonts/bb-icons.ttf';
 import './fonts/bb-icons.woff';
 import 'file-loader?name=fonts/[name].[ext]!./fonts/bb-icons.svg';
 
-// images
-import './images/bb-logo.svg';
-
 // styles
 import './main.scss';
 import './stylesheets/font-awesome.config'; // font awesome js settings
