@@ -12,11 +12,11 @@ import 'file-loader?name=fonts/[name].[ext]!./fonts/bb-icons.svg';
 
 // styles
 import './main.scss';
-import './stylesheets/font-awesome.config'; // font awesome js settings
+//import './stylesheets/font-awesome.config'; // font awesome js settings
 
 // chosen angular translations
-import 'file-loader?name=angular-i18n/[name].[ext]!angular-i18n/angular-locale_en.js';
-import 'file-loader?name=angular-i18n/[name].[ext]!angular-i18n/angular-locale_fr.js';
+import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_en.js';
+import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_fr.js';
 
 import config from './main.config';
 import run from './main.run';

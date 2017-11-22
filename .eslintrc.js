@@ -7,7 +7,7 @@ module.exports = {
     "parser": "espree",
 
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 8,
         "sourceType": "module"
     },
 
