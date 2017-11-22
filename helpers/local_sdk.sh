@@ -1,18 +1,22 @@
-if [ ! -d 'tmp' ]; then
-    mkdir 'tmp'
+if [  -d 'tmp' ]; then
+    rm -rf ./tmp
 fi
 
-rm -rf ./tmp/package.json ./tmp/node_modules ./tmp/package-lock.json
-mv ./node_modules ./tmp/node_modules
-node ./helpers/local_sdk_prepare.js
+mkdir 'tmp'
+
+if [ -d 'node_modules' ]; then
+    rm -rf ./node_modules/bookingbug-angular
+    mv ./node_modules ./tmp/node_modules
+fi
+
+node ./helpers/local_sdk_prepare.js # create tmp/package.json that refers relatively to local sdk
 
 if [ -f 'package-lock.json' ]; then
     cp  ./package-lock.json ./tmp/package-lock.json
 fi
 
 cd ./tmp
-rm -rf ./node_modules/bookingbug-angular
-npm install
+npm install --global-style
 cd ..
 
 mv ./tmp/node_modules ./node_modules
