@@ -11,15 +11,10 @@ fi
 
 node ./helpers/local_sdk_prepare.js # create tmp/package.json that refers relatively to local sdk
 
-if [ -f 'package-lock.json' ]; then
-    cp  ./package-lock.json ./tmp/package-lock.json
-fi
-
 cd ./tmp
 npm install --global-style --no-package-lock
 cd ..
 
 mv ./tmp/node_modules ./node_modules
-mv ./tmp/package-lock.json ./package-lock.json
 
 node ./helpers/local_sdk_symlink
