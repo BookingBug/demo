@@ -16,7 +16,7 @@ if [ -f 'package-lock.json' ]; then
 fi
 
 cd ./tmp
-npm install --global-style
+npm install --global-style --no-package-lock
 cd ..
 
 mv ./tmp/node_modules ./node_modules
