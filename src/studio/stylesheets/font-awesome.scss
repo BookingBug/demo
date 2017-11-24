@@ -1,6 +1,6 @@
 $fa-font-path: "fonts";
 @import '~bookingbug-angular/node_modules/font-awesome/scss/variables';
-@import './font-awesome.config.scss'; // font awesome overrides
+@import '../font-awesome/font-awesome.config'; // font awesome overrides
 @import '~bookingbug-angular/node_modules/font-awesome/scss/mixins';
 @import '~bookingbug-angular/node_modules/font-awesome/scss/path';
 @import '~bookingbug-angular/node_modules/font-awesome/scss/core';
