@@ -1,0 +1,1 @@
+require('bookingbug-angular/src/admin_dashboard.vendors');
