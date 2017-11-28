@@ -21,7 +21,8 @@
     "s-prod": "gulp --root studio --env production"
   },
   "dependencies": {
-    "bookingbug-angular": "3.3.1"
+    "bookingbug-angular": "3.3.1",
+    "loader-utils": "^1.1.0"
   },
   "devDependencies": {
     "babel-core": "~6.26.0",
@@ -38,11 +39,12 @@
     "deep-rename-keys": "~0.2.1",
     "deepmerge": "~1.5.0",
     "del": "~3.0.0",
+    "eslint": "~4.11.0",
     "exports-loader": "~0.6.4",
     "extract-sass-variables-loader": "~0.0.4",
     "extract-text-webpack-plugin": "~3.0.0",
     "file-loader": "~1.1.5",
-    "font-awesome-loader": "~1.0.2",
+    "font-awesome-npm-loader": "^1.0.2",
     "fs": "~0.0.1-security",
     "fs-extra": "~4.0.2",
     "fs-finder": "~1.8.1",
