@@ -1,12 +1,3 @@
-// Font awesome overrides.
-@import './stylesheets/font-awesome.scss';
-
-// Overrides for bootstrap variables.
-@import "./stylesheets/bootstrap-variables";
-
-// Overrides for core bookingbug variables.
-@import "./stylesheets/bb-variables";
-
 // Actual booking journey styles.
 @import "~bookingbug-angular/src/public-booking/main";
 

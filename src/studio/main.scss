@@ -1,18 +1,5 @@
-// Font awesome overrides.
-// @import './stylesheets/font-awesome.scss';
-
-// Overrides for bootstrap variables.
-@import "./stylesheets/bootstrap-variables";
-
-// Overrides for Admin LTE variables.
-@import "./stylesheets/adminlte-variables";
-
-// Overrides for core bookingbug variables.
-@import "./stylesheets/bb-variables";
-
 // Actual studio project.
 @import "~bookingbug-angular/src/admin-dashboard/main";
 
 // Client theme for customization.
 @import "./stylesheets/client_theme";
-
