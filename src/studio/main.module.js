@@ -15,7 +15,6 @@ import './images/bb-logo.svg';
 
 // styles
 import './main.scss';
-//import './stylesheets/font-awesome.config'; // font awesome js settings
 
 // chosen angular translations
 import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_en.js';
