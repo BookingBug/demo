@@ -8,6 +8,7 @@ function moduleConfig(AdminCheckInOptionsProvider,
                       AdminMembersIframeOptionsProvider,
                       AdminPublishIframeOptionsProvider,
                       AdminSettingsIframeOptionsProvider,
+                      bbi18nOptionsProvider,
                       bbConfig) {
     'ngInject';
 
@@ -21,7 +22,7 @@ function moduleConfig(AdminCheckInOptionsProvider,
     // AdminConfigIframeOptionsProvider.setOption('show_in_navigation', false);
 
     // AdminCoreOptionsProvider.setOption('default_state', 'members');
-    // AdminCoreOptionsProvider.setOption('available_languages', ['en', 'fr']);
+    bbi18nOptionsProvider.setOption('available_languages', ['en', 'fr']);
     // AdminCoreOptionsProvider.setOption('deactivate_sidenav', true);
     // AdminCoreOptionsProvider.setOption('side_navigation', [
     //     {
