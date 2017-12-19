@@ -1,5 +1,4 @@
-import bbAdminDashboardModule from 'bookingbug-angular/src/admin-dashboard/main.module';
-import 'bookingbug-angular/src/admin-dashboard/globs_to_remove';//TODO remove once globs removed on sdk
+import bbAdminDashboardModule from 'bookingbug-angular/src/admin-dashboard/entry.module';
 
 import './sdk-templates/**/*.html';
 import '../../tmp/config.constants';
