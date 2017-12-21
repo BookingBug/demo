@@ -1,7 +1,7 @@
 {
   "general": {
     "build": {
-      "app_name": "demo.public",
+      "app_name": "demo-public",
       "cache_control_max_age": "10",
       "default_html": "/new_booking.html",
       "deploy_version": "v0.0.5",
@@ -29,7 +29,7 @@
   "development": {
     "build": {
       "uglify": false,
-      "deploy_path": "/demo.public/development/",
+      "deploy_path": "/demo-public/development/",
       "deploy_version": false
     },
     "core": {
@@ -38,7 +38,7 @@
   },
   "staging": {
     "build": {
-      "deploy_path": "/demo.public/staging/"
+      "deploy_path": "/demo-public/staging/"
     },
     "core": {
       "api_url": "https://eu1.bookingbug.com"
@@ -47,7 +47,7 @@
   "production": {
     "build": {
       "cache_control_max_age": "300",
-      "deploy_path": "/demo.public/"
+      "deploy_path": "/demo-public/"
     },
     "core": {
       "api_url": "https://eu1.bookingbug.com"

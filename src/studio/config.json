@@ -1,7 +1,7 @@
 {
   "general": {
     "build": {
-      "app_name": "demo.studio",
+      "app_name": "demo-studio",
       "cache_control_max_age": "10",
       "default_html": "/index.html",
       "deploy_version": "v0.0.11",
@@ -29,7 +29,7 @@
   "development": {
     "build": {
       "uglify": false,
-      "deploy_path": "/demo.studio/development/",
+      "deploy_path": "/demo-studio/development/",
       "deploy_version": false
     },
     "core": {
@@ -38,7 +38,7 @@
   },
   "staging": {
     "build": {
-      "deploy_path": "/demo.studio/staging/"
+      "deploy_path": "/demo-studio/staging/"
     },
     "core": {
       "api_url": "https://eu1.bookingbug.com"
@@ -47,7 +47,7 @@
   "production": {
     "build": {
       "cache_control_max_age": "300",
-      "deploy_path": "/demo.studio/"
+      "deploy_path": "/demo-studio/"
     },
     "core": {
       "api_url": "https://eu1.bookingbug.com"
