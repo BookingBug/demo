@@ -15,7 +15,7 @@
       "analytics": {
         "enable_piwik": false
       },
-      "company_id": "37335"
+      "company_id": "37000"
     }
   },
   "local": {
@@ -26,6 +26,17 @@
       "api_url": "http://localhost:3000"
     }
   },
+  "qa": {
+    "build": {
+      "uglify": false,
+      "deploy_path": "/widget-templates-demo/development/",
+      "deploy_version": false
+    },
+    "core": {
+      "api_url": "https://eu1.bookingbug.com",
+      "company_id": "37335"
+    }
+  },
   "development": {
     "build": {
       "uglify": false,
@@ -33,7 +44,8 @@
       "deploy_version": false
     },
     "core": {
-      "api_url": "https://eu1.bookingbug.com"
+      "api_url": "https://qauk-staging.bookingbug.com",
+      "company_id": "40180"
     }
   },
   "staging": {

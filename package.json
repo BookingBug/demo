@@ -11,7 +11,7 @@
   "scripts": {
     "i": "rm -rf node_modules yarn.lock && yarn install",
     "il": "sh ./helpers/local_sdk.sh",
-    "p": "gulp --root public",
+    "p": "node --max_old_space_size=2048 ./node_modules/.bin/gulp --root public",
     "p-dev": "gulp --root public --env development",
     "p-staging": "gulp --root public --env staging",
     "p-prod": "gulp --root public --env production",
@@ -38,8 +38,8 @@
     "deepmerge": "~1.5.0",
     "del": "~3.0.0",
     "exports-loader": "~0.6.4",
-    "extract-text-webpack-plugin": "~3.0.0",
     "extract-sass-variables-loader": "~0.0.1",
+    "extract-text-webpack-plugin": "~3.0.0",
     "file-loader": "~0.11.2",
     "font-awesome-loader": "~1.0.2",
     "fs": "~0.0.1-security",
