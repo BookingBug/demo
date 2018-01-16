@@ -2,5 +2,9 @@
   "general": {
     "publicBookingVersion": 2,
     "typekitUrl": "https://use.typekit.net/lti7mmm.js"
+  },
+  "development": {
+    "publicBookingVersion": 2,
+    "typekitUrl": "https://use.typekit.net/lti7mmm.js"
   }
 }

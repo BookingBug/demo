@@ -7,7 +7,7 @@ module.exports = {
     "parser": "espree",
 
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 8,
         "sourceType": "module"
     },
 
@@ -65,6 +65,21 @@ module.exports = {
 
         "no-new-object": "error",
 
-        "no-var": "error"
+        "no-var": "error",
+
+        "no-confusing-arrow": ['error', {
+            "allowParens": true,
+        }],
+        
+        "prefer-arrow-callback": ['error', {
+            "allowNamedFunctions": false,
+            "allowUnboundThis": true,
+        }],
+
+        "arrow-spacing": ['error', { "before": true, "after": true }],
+        
+        "object-shorthand": ['error', 'always', {"ignoreConstructors": false, "avoidQuotes": true,}],
+
+        "quote-props": ['error', 'as-needed', { "keywords": false, "unnecessary": true, "numbers": false }],
     }
 };

@@ -19,7 +19,6 @@ import 'file-loader?name=fonts/[name].[ext]!./fonts/bb-icons.svg';
 
 // images
 import './images/bb-logo.svg';
-import './stylesheets/font-awesome.config'; // font awesome js settings
 
 // chosen angular translations
 import 'file-loader?name=angular-i18n/[name].[ext]!angular-i18n/angular-locale_en.js';

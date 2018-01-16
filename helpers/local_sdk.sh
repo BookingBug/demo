@@ -1,13 +1,18 @@
-if [ ! -d 'tmp' ]; then
-    mkdir 'tmp'
+if [  -d 'tmp' ]; then
+    rm -rf ./tmp
 fi
 
-rm -rf ./node_modules ./tmp/node_modules ./yarn.lock ./tmp/yarn.lock ./tmp/package.json
+mkdir 'tmp'
 
-node ./helpers/local_sdk_prepare.js
+if [ -d 'node_modules' ]; then
+    rm -rf ./node_modules/bookingbug-angular
+    mv ./node_modules ./tmp/node_modules
+fi
+
+node ./helpers/local_sdk_prepare.js # create tmp/package.json that refers relatively to local sdk
 
 cd ./tmp
-yarn install
+npm install --global-style --no-package-lock
 cd ..
 
 mv ./tmp/node_modules ./node_modules

@@ -33,9 +33,6 @@ For the purpose of this example migration, let's assume we're migrating an exist
     EXAMPLE_ROOT/src/studio/version
     EXAMPLE_ROOT/src/studio/entry.js
     EXAMPLE_ROOT/src/studio/tests.webpack.js
-    EXAMPLE_ROOT/src/studio/stylesheets/font-awesome.config.js
-    EXAMPLE_ROOT/src/studio/stylesheets/font-awesome.config.scss
-    EXAMPLE_ROOT/src/studio/stylesheets/font-awesome.scss    
     ```    
     
 5) Create new directory PROJECT_ROOT/src/studio/sdk-templates
@@ -70,8 +67,8 @@ For the purpose of this example migration, let's assume we're migrating an exist
 9)  If your project loads angular translations by configuring 'release.copy' section in PROJECT_ROOT/bower.json file, then replace with the following imports on top of PROJECT_ROOT/src/studio/main.module.js file:           
     
     ```javascript
-    import 'file-loader?name=angular-i18n/[name].[ext]!angular-i18n/angular-locale_en.js';
-    import 'file-loader?name=angular-i18n/[name].[ext]!angular-i18n/angular-locale_fr.js'; 
+    import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_en.js';
+    import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_fr.js';
     ```
    
 10) Move any 3rd party public dependencies from PROJECT_ROOT/bower.json into PROJECT_ROOT/package.json.
@@ -143,7 +140,6 @@ For the purpose of this example migration, let's assume we're migrating an exist
     import '../../tmp/config.constants';
 
     import './main.scss';
-    import './stylesheets/font-awesome.config'; // font awesome js settings
 
     ``` 
     
@@ -152,4 +148,4 @@ For the purpose of this example migration, let's assume we're migrating an exist
     gulp --root studio
    ```    
     
-
+22) All references to font-awesome (font-awesome.config.js, font-awesome.config.scss, font-awesome.scss) can deleted as it was moved to SDK.
