@@ -19,7 +19,7 @@
 <div bb-widget="{
     company_id: qs('companyId') || '<%= core.company_id %>',
     clear_member: true,
-    item_defaults: {merge_resources: true, merge_people: true, event: qs('event')},
+    item_defaults: {merge_resources: true, merge_people: true, event: qs('event'), event_group: qs('group'), event_chain: qs('chain')},
     route_format: '/{page}',
     template: 'templates/main-steps/main_appointment'
 }" bb-scroll-to="page:loaded" class="container"></div>
