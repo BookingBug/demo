@@ -3,7 +3,7 @@
     "build": {
       "app_name": "demo-member",
       "cache_control_max_age": "10",
-      "default_html": "/account.html",
+      "default_html": "/account.html?sso_token=yF6DcJLyITAOsDAAkbqelbbfFDXcACdh7ixUoYI1XPr2UVEGgASH489sABxstCWc5smTmb4qJt0%2FobR8uSAaXdwjuW0lZ8c0ywqRhdeQvbPUHBd%2FtXiwaiHNF23KUjj8lAxCTi8F46jbHfBrn2QO%2FQ%3D%3D",
       "deploy_version": "v0.0.5",
       "distribution_chunk_hash": false,
       "server_port": 8000,
