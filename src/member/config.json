@@ -1,0 +1,56 @@
+{
+  "general": {
+    "build": {
+      "app_name": "demo-member",
+      "cache_control_max_age": "10",
+      "default_html": "/account.html",
+      "deploy_version": "v0.0.5",
+      "distribution_chunk_hash": false,
+      "server_port": 8000,
+      "show_version": true,
+      "uglify": true
+    },
+    "core": {
+      "google_maps_key": "",
+      "analytics": {
+        "enable_piwik": false
+      },
+      "company_id": "37294"
+    }
+  },
+  "local": {
+    "build": {
+      "uglify": false
+    },
+    "core": {
+      "api_url": "http://localhost:3000"
+    }
+  },
+  "development": {
+    "build": {
+      "uglify": false,
+      "deploy_path": "/demo-member/development/",
+      "deploy_version": false
+    },
+    "core": {
+      "api_url": "https://eu1.bookingbug.com"
+    }
+  },
+  "staging": {
+    "build": {
+      "deploy_path": "/demo-member/staging/"
+    },
+    "core": {
+      "api_url": "https://eu1.bookingbug.com"
+    }
+  },
+  "production": {
+    "build": {
+      "cache_control_max_age": "300",
+      "deploy_path": "/demo-member/"
+    },
+    "core": {
+      "api_url": "https://eu1.bookingbug.com"
+    }
+  }
+}

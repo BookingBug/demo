@@ -38,3 +38,8 @@ To install required packages
 ## Further details
 
 More detailed information can be found in the [documentation](docs/README.md).
+
+
+####Member journey:
+
+account.html?sso_token=yF6DcJLyITAOsDAAkbqelbbfFDXcACdh7ixUoYI1XPr2UVEGgASH489sABxstCWc5smTmb4qJt0%2FobR8uSAaXdwjuW0lZ8c0ywqRhdeQvbPUHBd%2FtXiwaiHNF23KUjj8lAxCTi8F46jbHfBrn2QO%2FQ%3D%3D
