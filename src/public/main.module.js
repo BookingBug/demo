@@ -27,8 +27,9 @@ import run from './main.run';
 import versionModule from './version/version.module';
 
 // Try to load a versioned scss file, otherwise load the default one
+import BBUIVersionService from 'bookingbug-angular/src/public-booking/-versioning/ui_version.service';
 try {
-    require('./main_v' + versioning.getUIVersion() + '.scss');
+    require('./main_v' + BBUIVersionService.getUIVersion() + '.scss');
 } catch (ex) {
     require('./main.scss');
 }
