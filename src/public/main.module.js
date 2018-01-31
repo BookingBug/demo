@@ -1,6 +1,5 @@
 // Public booking dashboard module.
-import bbPublicBookingModule from 'bookingbug-angular/src/public-booking/main.module';
-import 'bookingbug-angular/src/public-booking/globs_to_remove'; // TODO remove once globs removed on sdk
+import bbPublicBookingModule from 'bookingbug-angular/src/public-booking/entry.module';
 
 // Template overrides.
 import './sdk-templates/**/*.html';

@@ -1,38 +1,41 @@
-// Admin dashboard module.
-import bbAdminDashboardModule from 'bookingbug-angular/src/admin-dashboard/entry.module';
+import bbPublicBookingModule from 'bookingbug-angular/src/public-booking/entry.module';
 
-// Template overrides.
-import './sdk-templates/**/*.html';
-
-// Injected variables need to be imported explicitly so that they can be watched.
-import './stylesheets/_client-variables.scss';
-
-// Configuration.
+//import './sdk-templates/**/*.html';
 import '../../tmp/config.constants';
 
-// Additional fonts.
+//templates
+//templates
+import './templates/**/*.html';
+
+// fonts
 import './fonts/bb-icons.eot';
 import './fonts/bb-icons.ttf';
 import './fonts/bb-icons.woff';
 import 'file-loader?name=fonts/[name].[ext]!./fonts/bb-icons.svg';
 
-// Styles.
+// images
+import './images/bb-logo.svg';
+
+// styles
 import './main.scss';
 
-// Chosen angular translations.
+// chosen angular translations
 import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_en.js';
 import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_fr.js';
 
-// Studio module bootstrap files.
 import config from './main.config';
 import run from './main.run';
 import versionModule from './version/version.module';
 
 export default angular
-    .module('studio', [
-        bbAdminDashboardModule,
+    .module('member', [
+        bbPublicBookingModule,
         versionModule
     ])
     .config(config)
     .run(run)
     .name;
+
+
+
+

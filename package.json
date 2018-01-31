@@ -21,14 +21,13 @@
     "s-prod": "gulp --root studio --env production"
   },
   "dependencies": {
-    "bookingbug-angular": "3.3.1"
+    "bookingbug-angular": "3.5.1"
   },
   "devDependencies": {
     "babel-core": "~6.26.0",
     "babel-loader": "~7.1.1",
     "babel-plugin-transform-async-to-generator": "~6.24.1",
     "babel-plugin-transform-es2015-classes": "~6.24.1",
-    "babel-plugin-transform-object-rest-spread": "~6.26.0",
     "babel-preset-env": "~1.6.0",
     "babel-preset-es2015": "~6.24.1",
     "babel-preset-es2016": "~6.24.1",
@@ -40,7 +39,6 @@
     "deepmerge": "~1.5.0",
     "del": "~3.0.0",
     "eslint": "~4.11.0",
-    "eslint-plugin-angular": "~3.1.1",
     "exports-loader": "~0.6.4",
     "extract-sass-variables-loader": "~0.0.4",
     "extract-text-webpack-plugin": "~3.0.0",
