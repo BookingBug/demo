@@ -5,8 +5,8 @@ import 'bookingbug-angular/src/admin-dashboard/globs_to_remove'; // TODO remove 
 // Template overrides.
 import './sdk-templates/**/*.html';
 
-// Injected variables need to be imported to be watched.
-import './stylesheets/variables/_bootstrap-variables.scss';
+// Injected variables need to be imported explicitly so that they can be watched.
+import './stylesheets/_client-variables.scss';
 
 // Configuration.
 import '../../tmp/config.constants';

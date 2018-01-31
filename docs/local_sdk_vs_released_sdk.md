@@ -4,12 +4,12 @@
 
 ### ```npm run i```
 Install released version of SDK
-1) removes node_modules, yarn.lock
+1) removes node_modules
 2) install all dependencies listed in package.json file
 
 ### ```npm run il```
 Install local version of SDK
-1) removes node_modules, yarn.lock
+1) removes node_modules
 2) prepares new version of package.json inside .tmp directory
 3) modifies ./tmp/package.json so bookingbug-angular dependency points to your local repository (BB_SDK_SRC_DIR)
 4) install ./tmp/package.json

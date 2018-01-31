@@ -2,6 +2,8 @@
 
 ## Migrating SDK v2 to SDK v3
 
+## These instructions assume that you have downloaded the demo project from here: https://github.com/BookingBug/demo ##
+
 We want to keep all projects created for one client inside one repository.  
 
 If you're migrating a bespoke 'studio' project, take  [studio](https://github.com/BookingBug/demo/tree/master/src/studio) as an example.
@@ -67,8 +69,8 @@ For the purpose of this example migration, let's assume we're migrating an exist
 9)  If your project loads angular translations by configuring 'release.copy' section in PROJECT_ROOT/bower.json file, then replace with the following imports on top of PROJECT_ROOT/src/studio/main.module.js file:           
     
     ```javascript
-    import 'file-loader?name=angular-i18n/[name].[ext]!angular-i18n/angular-locale_en.js';
-    import 'file-loader?name=angular-i18n/[name].[ext]!angular-i18n/angular-locale_fr.js'; 
+    import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_en.js';
+    import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_fr.js';
     ```
    
 10) Move any 3rd party public dependencies from PROJECT_ROOT/bower.json into PROJECT_ROOT/package.json.

@@ -8,6 +8,9 @@ import './sdk-templates/**/*.html';
 // Configuration.
 import '../../tmp/config.constants';
 
+// Injected variables need to be imported explicitly so that they can be watched.
+import './stylesheets/_client-variables.scss';
+
 // Additional templates.
 import './templates/main-steps/main_appointment.html';
 
