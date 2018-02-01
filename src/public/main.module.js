@@ -1,27 +1,32 @@
+// Public booking dashboard module.
 import bbPublicBookingModule from 'bookingbug-angular/src/public-booking/entry.module';
 
+// Template overrides.
 import './sdk-templates/**/*.html';
+
+// Configuration.
 import '../../tmp/config.constants';
 
-//templates
+// Injected variables need to be imported explicitly so that they can be watched.
+import './stylesheets/_client-variables.scss';
+
+// Additional templates.
 import './templates/main-steps/main_appointment.html';
 
-// fonts
+// Additional fonts.
 import './fonts/bb-icons.eot';
 import './fonts/bb-icons.ttf';
 import './fonts/bb-icons.woff';
 import 'file-loader?name=fonts/[name].[ext]!./fonts/bb-icons.svg';
 
-// images
-import './images/bb-logo.svg';
-
-// styles
+// Styles.
 import './main.scss';
 
-// chosen angular translations
+// Chosen angular translations.
 import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_en.js';
 import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modules/angular-i18n/angular-locale_fr.js';
 
+// Studio module bootstrap files.
 import config from './main.config';
 import run from './main.run';
 import versionModule from './version/version.module';

@@ -1,22 +1,5 @@
-//bootstrap
-@import "./stylesheets/bootstrap-variables";
-@import "~bookingbug-angular/node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "~bookingbug-angular/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-//bb
-@import "./stylesheets/bb-variables";
-@import '~bookingbug-angular/src/core/_stylesheets/project_version';
+// Actual booking journey styles.
+@import "~bookingbug-angular/src/public-booking/main";
 
-#bb {
-  //bb
-  @import "~bookingbug-angular/src/public-booking/main";
-
-  margin: 0;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $text-color;
-  background-color: $body-bg;
-
-  //client
-  @import "./stylesheets/client_theme";
-}
+// Client theme for customization.
+@import "./stylesheets/client_theme";

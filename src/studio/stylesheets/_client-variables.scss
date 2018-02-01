@@ -1,0 +1,24 @@
+/*
+ * All variables are shared. If some variables are defined twice, the first definition takes precedence.
+ */
+
+// Override admin-lte variables here.
+$boxed-layout-bg-image-path         : "../images/bg-gray.png";
+$sidebar-light-bg                   : #f8f8f8;
+$sidebar-light-hover-bg             : lighten(#f0f0f1, 2%);
+$sidebar-light-color                : #444;
+$sidebar-light-hover-color          : #000;
+$sidebar-light-submenu-bg           : $sidebar-light-hover-bg;
+$sidebar-light-submenu-color        : #777;
+$sidebar-light-submenu-hover-color  : #000;
+
+
+// Override bootstrap variables here.
+$brand-primary                : #8cc96c;
+$brand-success                : #0cc0e1;
+$brand-info                   : #087f94;
+$link-color                   : $brand-primary;
+$input-color                  : #555;
+$font-family-sans-serif       : 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$bootstrap-sass-asset-helper  : true;
+$icon-font-path: if($bootstrap-sass-asset-helper, "~bootstrap-sass/assets/fonts/bootstrap/", "/fonts/");

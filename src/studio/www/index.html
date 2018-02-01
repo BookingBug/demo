@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="studio" bb-api-url="<%= core.api_url %>">
+<html ng-app="studio" id="bb-scope" bb-api-url="<%= core.api_url %>">
 <head>
     <meta charset="UTF-8">
     <title>BookingBug Dashboard</title>
@@ -15,15 +15,11 @@
     <script src="./<%= chunks.bookingWidgetDependenciesJS %>" type="text/javascript"></script>
     <script src="./<%= chunks.bookingWidgetJS %>" type="text/javascript"></script>
     <link href="./<%= chunks.bookingWidgetCSS %>" type="text/css" media="all" rel="stylesheet"/>
-
 </head>
 
 <body>
-
-<div class="skin-default" bb-admin-dashboard id="bb" bb="bb" body-resize></div>
-
-<bb-project-version></bb-project-version>
-
+    <div class="skin-default" bb-admin-dashboard id="bb" bb="bb" body-resize></div>
+    <bb-project-version></bb-project-version>
 </body>
 
 </html>

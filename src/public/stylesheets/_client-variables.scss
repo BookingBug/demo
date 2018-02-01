@@ -1,0 +1,7 @@
+/*
+ * All variables are shared. If some variables are defined twice, the first definition takes precedence.
+ */
+
+// Override bookingbug, bootstrap or other variables here.
+$bootstrap-sass-asset-helper: true;
+$icon-font-path: if($bootstrap-sass-asset-helper, "~bootstrap-sass/assets/fonts/bootstrap/", "/fonts/");
