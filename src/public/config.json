@@ -11,7 +11,7 @@
       "uglify": true
     },
     "core": {
-      "google_maps_key": "AIzaSyDFAIV9IW8riXGAzlupPb9_6X14dxmUMt8",
+      "google_maps_key": "",
       "analytics": {
         "enable_piwik": false
       },
