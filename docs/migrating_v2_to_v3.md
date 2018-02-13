@@ -2,6 +2,8 @@
 
 ## Migrating SDK v2 to SDK v3
 
+## These instructions assume that you have downloaded the demo project from here: https://github.com/BookingBug/demo ##
+
 We want to keep all projects created for one client inside one repository.  
 
 If you're migrating a bespoke 'studio' project, take  [studio](https://github.com/BookingBug/demo/tree/master/src/studio) as an example.
