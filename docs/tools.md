@@ -12,6 +12,8 @@ Optional flags:
 - --env
 - --uglify
 - --tests
+- --analyzer
+- --noBrowser
 
 ### ```gulp --distribution```
 Creates project build.
@@ -22,6 +24,7 @@ Required flags:
 Optional flags:
 - --env
 - --uglify
+- --analyzer
 
 ### ```gulp unit-tests```
 Runs unit tests once.
@@ -45,6 +48,7 @@ Optional flags:
 - --env
 - --uglify
 - --deployVersion
+- --noQa
 
 ### ```gulp relocate-templates```
 Move templates to new location following changes made on sdk level:  [../../src/relocate_templates.json](../../src/relocate_templates.json)
@@ -65,7 +69,19 @@ By default set to development.
 ### --uglify
 Value: true | false
 
-If not used will be read from config.json (property 'uglify')
+If not used will be read from config.json (property 'uglify').
+
+
+### --analyzer
+If used, html report about project bundles will be created and exposed on port 8888.
+
+
+### --noBrowser
+if used web server will not open a new browser tab on first successful transpilation.
+
+
+### --noQa
+If used, will not add '/QA/branch-or-tag-name/' to the final AWS bucket deployment path.
 
 
 ### --deployVersion
