@@ -1,14 +1,7 @@
-function moduleConfig(AdminCheckInOptionsProvider,
-                      AdminCalendarOptionsProvider,
-                      AdminClientsOptionsProvider,
-                      AdminConfigIframeOptionsProvider,
-                      AdminCoreOptionsProvider,
-                      AdminDashboardIframeOptionsProvider,
-                      AdminLoginOptionsProvider,
-                      AdminMembersIframeOptionsProvider,
-                      AdminPublishIframeOptionsProvider,
-                      AdminSettingsIframeOptionsProvider,
-                      bbConfig) {
+function moduleConfig(AdminCheckInOptionsProvider, AdminCalendarOptionsProvider, AdminClientsOptionsProvider, 
+    AdminConfigIframeOptionsProvider, AdminCoreOptionsProvider, AdminDashboardIframeOptionsProvider, 
+    AdminLoginOptionsProvider, AdminMembersIframeOptionsProvider, AdminPublishIframeOptionsProvider, 
+    AdminSettingsIframeOptionsProvider, GeneralOptionsProvider, bbConfig) {
     'ngInject';
 
     // AdminCheckInOptionsProvider.setOption('use_default_states', false);
@@ -39,6 +32,7 @@ function moduleConfig(AdminCheckInOptionsProvider,
     // AdminLoginOptionsProvider.setOption('sso_token', 'eyJlbWFpbCI6ImFkbWluMUBleGFtcGxlLmNvbSJ9');
     // AdminLoginOptionsProvider.setOption('company_id', '37000');
     AdminLoginOptionsProvider.setOption('show_api_field', true);
+    GeneralOptionsProvider.setOption('companyHasExternalBookings', true);
 
     /*AdminCalendarOptionsProvider.setOption('minTime', '00:00');
      AdminCalendarOptionsProvider.setOption('maxTime', '24:00');*/
