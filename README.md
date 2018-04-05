@@ -1,7 +1,7 @@
 ## Basic Usage
 ### Installation
 
-To install required packages
+To install required packages:
 
 `npm run i`
 
