@@ -25,7 +25,7 @@ function BbProjectVersionController(bbConfig, $window) {
             this.projectDeployVersion = 'unreleased version';
         }
 
-        this.buildDateTime = bbConfig.BUILD.DATETIME;
+        this.buildDateTime = bbConfig.BUILD.BUILD_DATETIME;
 
         this.showVersion = bbConfig.BUILD.SHOW_VERSION;
     };
