@@ -24,6 +24,8 @@ function BbProjectVersionController(bbConfig) {
             this.projectDeployVersion = 'unreleased version';
         }
 
+        this.buildDateTime = bbConfig.BUILD.DATETIME;
+
         this.showVersion = bbConfig.BUILD.SHOW_VERSION;
     };
 }

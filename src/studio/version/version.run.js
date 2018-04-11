@@ -20,7 +20,8 @@ function run(bbConfig, $window) {
 
         $window.BB = {
             SDK_VERSION: sdkVersion,
-            PROJECT_DEPLOY_VERSION: projectDeployVersion
+            PROJECT_DEPLOY_VERSION: projectDeployVersion,
+            BUILD_DATETIME: bbConfig.BUILD.BUILD_DATETIME
         };
     }
 
