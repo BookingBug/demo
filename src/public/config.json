@@ -4,7 +4,7 @@
       "app_name": "demo-public",
       "cache_control_max_age": "10",
       "default_html": "/new_booking.html",
-      "deploy_version": "v0.0.12",
+      "deploy_version": "v0.0.14",
       "distribution_chunk_hash": false,
       "server_port": 8000,
       "show_version": true,
