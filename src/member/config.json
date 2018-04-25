@@ -26,6 +26,17 @@
       "api_url": "http://localhost:3000"
     }
   },
+  "apidemo": {
+    "build": {
+      "uglify": false,
+      "deploy_path": "/api-demo-member/",
+      "deploy_version": false
+    },
+    "core": {
+      "company_id": "37000",
+      "api_url": "https://apidemo.bookingbug.com"
+    }
+  },
   "development": {
     "build": {
       "uglify": false,
