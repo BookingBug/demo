@@ -1,67 +1,78 @@
 {
-  "general": {
-    "build": {
-      "app_name": "demo-member",
-      "cache_control_max_age": "10",
-      "default_html": "/account.html",
-      "deploy_version": "v0.0.12",
-      "distribution_chunk_hash": false,
-      "server_port": 8000,
-      "show_version": true,
-      "uglify": true
+    "general": {
+        "build": {
+            "app_name": "demo-member",
+            "cache_control_max_age": "10",
+            "default_html": "/account.html",
+            "deploy_version": "v0.0.12",
+            "distribution_chunk_hash": false,
+            "server_port": 8000,
+            "show_version": true,
+            "uglify": true
+        },
+        "core": {
+            "google_maps_key": "",
+            "analytics": {
+                "enable_piwik": false
+            },
+            "company_id": "37294"
+        }
     },
-    "core": {
-      "google_maps_key": "",
-      "analytics": {
-        "enable_piwik": false
-      },
-      "company_id": "37294"
-    }
-  },
-  "local": {
-    "build": {
-      "uglify": false
+    "local": {
+        "build": {
+            "uglify": false
+        },
+        "core": {
+            "api_url": "http://localhost:3000"
+        }
     },
-    "core": {
-      "api_url": "http://localhost:3000"
-    }
-  },
-  "apidemo": {
-    "build": {
-      "uglify": false,
-      "deploy_path": "/api-demo-member/",
-      "deploy_version": false
+    "salesforce-demo": {
+        "build": {
+            "uglify": false,
+            "deploy_path": "/salesforce-demo/",
+            "deploy_version": false
+        },
+        "core": {
+            "company_id": "37000",
+            "api_url": "https://salesforce-demo.bookingbug.com"
+        }
     },
-    "core": {
-      "company_id": "37000",
-      "api_url": "https://apidemo.bookingbug.com"
-    }
-  },
-  "development": {
-    "build": {
-      "uglify": false,
-      "deploy_path": "/demo-member/development/",
-      "deploy_version": false
+    "apidemo": {
+        "build": {
+            "uglify": false,
+            "deploy_path": "/api-demo-member/",
+            "deploy_version": false
+        },
+        "core": {
+            "company_id": "37000",
+            "api_url": "https://apidemo.bookingbug.com"
+        }
     },
-    "core": {
-      "api_url": "https://eu1.bookingbug.com"
-    }
-  },
-  "staging": {
-    "build": {
-      "deploy_path": "/demo-member/staging/"
+    "development": {
+        "build": {
+            "uglify": false,
+            "deploy_path": "/demo-member/development/",
+            "deploy_version": false
+        },
+        "core": {
+            "api_url": "https://eu1.bookingbug.com"
+        }
     },
-    "core": {
-      "api_url": "https://eu1.bookingbug.com"
-    }
-  },
-  "production": {
-    "build": {
-      "cache_control_max_age": "300",
-      "deploy_path": "/demo-member/"
+    "staging": {
+        "build": {
+            "deploy_path": "/demo-member/staging/"
+        },
+        "core": {
+            "api_url": "https://eu1.bookingbug.com"
+        }
     },
-    "core": {
-      "api_url": "https://eu1.bookingbug.com"
+    "production": {
+        "build": {
+            "cache_control_max_age": "300",
+            "deploy_path": "/demo-member/"
+        },
+        "core": {
+            "api_url": "https://eu1.bookingbug.com"
+        }
     }
-  }
 }
