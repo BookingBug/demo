@@ -1,0 +1,49 @@
+<div class="header">
+
+  <div bb-form-data-store></div>
+
+  <div bb-language-picker></div>
+
+  <!-- BREADCRUMB ROUTE
+  <div
+    bb-breadcrumbs
+    class="breadcrumbs_holder"
+    ng-init="setRoute([
+    {page:'event_list', title: 'Select an event'},
+    {page:'event', title: 'Event'},
+    {page:'checkout', title: 'Confirmation'}
+    ])">
+  -->
+
+  <div
+    class="alerts"
+    bb-scroll-to="alert:raised"
+    bb-always-scroll>
+    <div
+      uib-alert
+      ng-repeat="alert in $root.alerts"
+      ng-class="'alert-' + alert.type">
+      <ul>
+        <li ng-bind-html="alert.msg"></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="bb-content">
+
+  <div
+    bb-content
+    class="ng-cloak">
+  </div>
+
+  <div
+    bb-loading
+    class="bb-loader">
+    <div id="loading_icon">
+      <div id="wait_graphic">&nbsp;</div>
+    </div>
+  </div>
+
+</div>

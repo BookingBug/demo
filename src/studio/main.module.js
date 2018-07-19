@@ -1,6 +1,7 @@
 import bbAdminDashboardModule from 'bookingbug-angular/src/admin-dashboard/entry.module';
 
 import './sdk-templates/**/*.html';
+import './templates/**/*.html';
 import '../../tmp/config.constants';
 
 // fonts

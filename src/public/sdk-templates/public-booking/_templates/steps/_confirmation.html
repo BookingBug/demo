@@ -1,0 +1,170 @@
+<div
+  bb-total
+  class="bb-checkout">
+
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10">
+
+      <div class="bb-subcontent">
+
+        <div class="confirmation-header bb-confirmation-border-margin">
+
+          <h2
+            tabindex="0"
+            aria-label="{{PUBLIC_BOOKING.CONFIRMATION.TITLE | translate}}"
+            translate="PUBLIC_BOOKING.CONFIRMATION.TITLE">
+          </h2>
+
+          <div ng-show="total.bookingHasBeenMoved">
+            <p
+              tabindex="0"
+              aria-label="{{PUBLIC_BOOKING.CONFIRMATION.TITLE | translate}}"
+              class="bb-confirmation-p-alignment"
+              translate="PUBLIC_BOOKING.CONFIRMATION.MOVE_BOOKING_CONFIRMATION"
+              translate-values="{member_name: total.client.first_name}">
+            </p>
+          </div>
+
+          <div ng-show="!total.containsWaitlistItems() && !total.bookingHasBeenMoved">
+            <p
+              tabindex="0"
+              aria-label="{{PUBLIC_BOOKING.CONFIRMATION.TITLE | translate}}"
+              class="bb-confirmation-p-alignment"
+              translate="PUBLIC_BOOKING.CONFIRMATION.BOOKING_CONFIRMATION"
+              translate-values="{member_name: total.client.first_name}">
+            </p>
+
+          </div>
+
+
+          <div ng-show="total.containsWaitlistItems()">
+            <p
+              tabindex="0"
+              aria-label="{{PUBLIC_BOOKING.CONFIRMATION.WAITLIST_CONFIRMATION | translate}}"
+              class="bb-confirmation-p-alignment"
+              translate="PUBLIC_BOOKING.CONFIRMATION.WAITLIST_CONFIRMATION"
+              translate-values="{member_name: total.client.first_name}">
+            </p>
+          </div>
+
+          <div class="row hidden-print text-right print-row">  
+            <button
+              type="button"
+              class="btn btn-link"
+              onclick="window.print()">
+              <span class="fa fa-print"></span>
+              <span translate="PUBLIC_BOOKING.CONFIRMATION.PRINT_BTN"></span>
+            </button>
+            <div
+              bb-booking-export="total"
+              class="bb-booking-export">
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <ul
+            ng-show="total.items.length > 1"
+            class="confirmation-summary">
+
+            <li class="row confirmation-summary-item" tabindex="0" aria-label="{{PUBLIC_BOOKING.CONFIRMATION.PURCHASE_REF_LBL | translate}}">
+              <div 
+                class="bb-summary-label"
+                translate="PUBLIC_BOOKING.CONFIRMATION.PURCHASE_REF_LBL">
+              </div>
+              <div class="bb-summary-value">{{total.id}}</div>
+            </li>
+          </ul>
+
+          <ul
+            class="confirmation-summary"
+            ng-repeat="booking in total.bookings">
+
+            <li
+              aria-label="{{PUBLIC_BOOKING.CONFIRMATION.SERVICE_LBL | translate}}"
+              tabindex="0"
+              ng-show="booking.full_describe"
+              class="row confirmation-summary-item">
+              <div
+                class="bb-summary-label"
+                translate="PUBLIC_BOOKING.CONFIRMATION.SERVICE_LBL">
+              </div>
+              <div class="bb-summary-value">{{booking.full_describe}}</div>
+            </li>
+
+            <li
+              aria-label="{{PUBLIC_BOOKING.CONFIRMATION.DATE_TIME_LBL | translate}}"
+              tabindex="0"
+              ng-show="booking.describe"
+              class="row confirmation-summary-item">
+              <div class="bb-summary-label">
+                <span translate="PUBLIC_BOOKING.CONFIRMATION.DATE_TIME_LBL"></span>
+              </div>
+              <div class="bb-summary-value">{{booking.datetime | datetime: 'LLLL'}}</div>
+            </li>
+
+            <li
+              aria-label="{{PUBLIC_BOOKING.CONFIRMATION.PRICE_LBL | translate}}"
+              tabindex="0"
+              ng-show="booking.price"
+              class="row confirmation-summary-item">
+              <div class="bb-summary-label">
+                <span translate="PUBLIC_BOOKING.CONFIRMATION.PRICE_LBL"></span>
+              </div>
+              <div class="bb-summary-value">{{booking.price | currency}}</div>
+            </li>
+
+          </ul>
+
+          <ul
+            ng-show="total.bookings[0].address.lat"
+            class="confirmation-summary">
+
+            <li class="row confirmation-summary-item">
+              <div class="col-sm-12">
+                <div bb-address-map="total.bookings[0].address">
+                  <div
+                    ng-if="map.center"
+                    ui-gmap-google-map center="map.center"
+                    zoom="map.zoom"
+                    options="options">
+                    <div
+                      ui-gmap-marker
+                      coords="marker.coords"
+                      idkey="marker.id">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <div class="confirmation-summary-address">
+              <div ng-show="total.bookings[0].address">
+                <span class="fa fa-map-marker"></span>
+                {{total.bookings[0].address | address_single_line}}
+              </div>
+              <div ng-show="total.bookings[0].address.phone">
+                <span class="fa fa-phone"></span>
+                {{total.bookings[0].address.phone | local_phone_number}}
+              </div>
+            </div>
+
+          </ul>
+
+          <div
+            bb-custom-confirmation-text
+            class="bb-message">
+            <div
+              ng-repeat="msg in messages"
+              ng-bind-html="msg">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

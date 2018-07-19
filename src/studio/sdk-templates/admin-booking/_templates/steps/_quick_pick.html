@@ -1,0 +1,131 @@
+<div
+  bb-form-data-store
+  ng-if="all_done"
+  bb-page
+  bb-wait-for="emptybasket()"
+  bb-wait-var="all_done"
+  class="bb-quick-pick">
+
+  <uib-tabset>
+
+    <uib-tab>
+
+      <uib-tab-heading>
+        <i class="fa fa-calendar-plus-o"></i>
+        <span translate="ADMIN_BOOKING.QUICK_PICK.MAKE_BOOKING_TAB_HEADING"></span>
+      </uib-tab-heading>
+      <br/>
+
+      <!-- Make booking tab START -->
+      <ng-form
+        bb-form
+        bb-form-route="{{$root.configuration.adminBooking.templates.quickPick.routeTemplateUrl}}"
+        name="appointmentBookingForm">
+
+        <div
+          bb-services="{allow_single_pick: true}"
+          class="form-group"
+          ng-class="{
+            'has-error': appointmentBookingForm.service.$invalid && (appointmentBookingForm.$submitted || appointmentBookingForm.service.$dirty)
+          }">
+
+          <label aria-hidden="true" translate="ADMIN_BOOKING.QUICK_PICK.SERVICE_LABEL"></label>
+
+          <select
+            aria-label="{{'ADMIN_BOOKING.QUICK_PICK.SERVICE_LABEL' | translate}}"
+            class=" form-control"
+            name="service"
+            ng-model="$bbServicesCtrl.$scope.service"
+            ng-options="(s.displayName || s.name) for s in (filtered_items | orderBy:'name' ) track by s.id"
+            required="true">
+            <option aria-label="{{'ADMIN_BOOKING.QUICK_PICK.SERVICE_LABEL' | translate}}"
+              translate="ADMIN_BOOKING.QUICK_PICK.SERVICE_DEFAULT_OPTION"
+              value="">
+            </option>
+          </select>
+
+          <div ng-messages="appointmentBookingForm.service.$error" role="alert">
+
+            <div ng-if="appointmentBookingForm.service.$dirty || appointmentBookingForm.$submitted">
+
+              <div
+                class="error-message"
+                ng-message="required">
+                <span class="error-message__item" translate="ADMIN_BOOKING.QUICK_PICK.SERVICE_REQUIRED_MSG"></span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div
+          bb-people
+          class="form-group"
+          ng-if="appointmentBookingForm.service.$modelValue && bb.company.$has('people')">
+
+          <label translate="ADMIN_BOOKING.QUICK_PICK.PERSON_LABEL"></label>
+
+          <select class=" form-control"
+            name="person"
+            ng-model="$bbPeopleCtrl.$scope.person"
+            ng-options="p.name for p in (bookable_people | orderBy:'name') track by p.id">
+            <option
+              translate="ADMIN_BOOKING.QUICK_PICK.PERSON_DEFAULT_OPTION"
+              value="">
+            </option>
+          </select>
+
+        </div>
+
+        <div
+          bb-resources
+          class="form-group"
+          ng-if="appointmentBookingForm.service.$modelValue && bb.company.$has('resources')">
+
+          <label translate="ADMIN_BOOKING.QUICK_PICK.RESOURCE_LABEL"></label>
+
+          <select
+            class="form-control"
+            name="person"
+            ng-model="$bbResourcesCtrl.$scope.resource"
+            ng-options="r.name for r in (bookable_resources | orderBy:'name') track by r.id">
+            <option
+              translate="ADMIN_BOOKING.QUICK_PICK.RESOURCE_DEFAULT_OPTION"
+              value="">
+            </option>
+          </select>
+
+        </div>
+
+        <button
+          class="btn btn-primary"
+          ng-click="submitForm()"
+          type="button"
+          translate="ADMIN_BOOKING.QUICK_PICK.NEXT_BTN">
+        </button>
+
+      </ng-form>
+
+      <!-- Make booking tab END -->
+
+    </uib-tab>
+
+    <uib-tab ng-if="!bb.hide_block">
+
+      <uib-tab-heading>
+        <i class="fa fa-calendar-minus-o"></i>
+        <span translate="ADMIN_BOOKING.QUICK_PICK.BLOCK_TIME_TAB_HEADING"></span>
+      </uib-tab-heading>
+      <br/>
+
+      <!-- Block time tab START -->
+      <bb-block-time model="bb"></bb-block-time>
+      <!-- Block time tab END -->
+
+    </uib-tab>
+
+  </uib-tabset>
+
+</div>

@@ -1,8 +1,8 @@
 import bbPublicBookingModule from 'bookingbug-angular/src/public-booking/entry.module';
 
-import '../../tmp/config.constants';
 import './sdk-templates/**/*.html';
 import './templates/**/*.html';
+import '../../tmp/config.constants';
 
 
 // fonts

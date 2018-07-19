@@ -1,0 +1,143 @@
+<_div
+  class="header"
+  aria-hidden="{{!isLoaded || coveredByModal}}">
+
+  <div bb-form-data-store></div>
+
+  <div bb-language-picker></div>
+
+  <div
+    bb-breadcrumbs class="breadcrumbs_holder"
+    ng-init="setRoute([
+      {page:'member/_templates/steps/login', title: 'Login'},
+      {page:'member/_templates/steps/account', title: 'My Profile'}
+    ])">
+  </div>
+
+</_div>
+
+<div
+  class="content"
+  aria-hidden="{{!isLoaded || coveredByModal}}">
+
+  <div
+    class="row"
+    ng-if="isMemberLoggedIn()">
+
+    <div class="col-sm-3">
+
+      <div
+        uib-tabset
+        vertical="true"
+        type="pills">
+        <div
+          uib-tab
+          ng-click="showPage('member/_templates/steps/account.html')">
+          <div
+            uib-tab-heading
+            translate="PUBLIC_BOOKING.MAIN_ACCOUNT.ACCOUNT_TAB_HEADING">
+          </div>
+        </div>
+        <div
+          uib-tab
+          ng-click="showPage('member/_templates/steps/upcoming_bookings.html')">
+          <div
+            uib-tab-heading
+            translate="PUBLIC_BOOKING.MAIN_ACCOUNT.UPCOMING_BOOKINGS_TAB_HEADING">
+          </div>
+        </div>
+        <div
+          uib-tab
+          ng-click="showPage('member/_templates/steps/past_bookings.html')">
+          <div
+            uib-tab-heading
+            translate="PUBLIC_BOOKING.MAIN_ACCOUNT.PAST_BOOKINGS_TAB_HEADING">
+          </div>
+        </div>
+        <div
+          uib-tab
+          ng-click="showPage('member/_templates/steps/purchase_history')">
+          <div
+            uib-tab-heading
+            translate="PUBLIC_BOOKING.MAIN_ACCOUNT.WALLET_TAB_HEADING">
+          </div>
+        </div>
+        <div
+          uib-tab
+          ng-click="showPage('member/_templates/steps/wallet')">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-sm-9">
+
+      <div
+        class="alerts"
+        bb-scroll-to="alert:raised">
+        <div
+          alert
+          ng-repeat="alert in $root.alerts"
+          type="{{alert.type}}">
+          <ul>
+            <li ng-bind-html="alert.msg"></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        bb-content
+        class="ng-cloak">
+      </div>
+
+    </div>
+
+  </div>
+
+  <div ng-if="!isMemberLoggedIn()">
+
+    <div
+      class="alerts"
+      bb-scroll-to="alert:raised">
+      <div
+        uib-alert
+        ng-repeat="alert in $root.alerts"
+        ng-class="'alert-' + alert.type">
+        <ul>
+          <li ng-bind-html="alert.msg"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      bb-content
+      class="ng-cloak">
+    </div>
+
+  </div>
+
+  <div bb-loading class="bb-loader">
+    <div id="loading_icon">
+      <div id="wait_graphic">&nbsp;</div>
+    </div>
+  </div>
+
+</div>
+
+<div
+  bb-dynamic-footer
+  class="footer"
+  aria-hidden="{{!isLoaded || coveredByModal}}">
+  <div ng-show="isLoaded" class="powered-by">
+    <span>
+      <span translate="PUBLIC_BOOKING.MAIN.POWERED_BY"></span>
+      <a
+        href="//www.bookingbug.com"
+        style="text-decoration:none"
+        target="_blank">
+        <span style="color:#087f94">booking</span>
+        <span style="color:#88c66f">bug</span>
+      </a>
+    </span>
+  </div>
+</div>
