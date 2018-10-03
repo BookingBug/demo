@@ -1,5 +1,7 @@
-function moduleConfig(bbConfig) {
+function moduleConfig(bbConfig, GeneralOptionsProvider) {
     'ngInject';
+
+    //GeneralOptionsProvider.setOption('suppressChildCompanies', true);
 
 }
 

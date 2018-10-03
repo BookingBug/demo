@@ -32,7 +32,7 @@ function moduleConfig(AdminCheckInOptionsProvider, AdminCalendarOptionsProvider,
     // AdminLoginOptionsProvider.setOption('sso_token', 'eyJlbWFpbCI6ImFkbWluMUBleGFtcGxlLmNvbSJ9');
     // AdminLoginOptionsProvider.setOption('company_id', '37000');
     AdminLoginOptionsProvider.setOption('show_api_field', true);
-    GeneralOptionsProvider.setOption('companyHasExternalBookings', true);
+    GeneralOptionsProvider.setOption('suppressChildCompanies', true);
 
     /*AdminCalendarOptionsProvider.setOption('minTime', '00:00');
      AdminCalendarOptionsProvider.setOption('maxTime', '24:00');*/

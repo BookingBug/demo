@@ -1,0 +1,12 @@
+<div class="bb-typeahead-results-wrapper">
+    <span
+      ng-class="{'company-name-bold': match.model.ref}"
+      class="bb-typeahead-header">
+      {{match.model.name}}
+    </span>
+    <span
+      ng-if="match.model.ref"
+      translate="ADMIN_DASHBOARD.LOGIN_PAGE.COMPANY_REFERENCE_LABEL"
+      translate-values="{ref: match.model.ref}">
+    </span>
+</div>

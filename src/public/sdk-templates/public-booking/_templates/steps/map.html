@@ -1,0 +1,267 @@
+<bb-company-search
+        user-id="37003"
+        selected-company=""
+        on-company-selected="">
+</bb-company-search>
+
+
+
+
+
+
+
+<div
+        id="map"
+        bb-map="{default_zoom: 6}"
+        class="bb-store-search">
+
+  <!-- <div class="page-summary">
+    <p><span translate="PUBLIC_BOOKING.MAP.MAP_HEADING"></span></p>
+  </div> -->
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <div class="row search-form-wrapper">
+
+        <div class="col-xs-10 col-sm-6 col-sm-offset-3">
+
+          <form
+                  role="form"
+                  ng-submit="searchAddress()">
+
+            <div
+                    class="form-group"
+                    style="width: 100%;">
+              <label
+                      class="sr-only"
+                      for="search-stores"
+                      translate="PUBLIC_BOOKING.MAP.SEARCH_LBL">
+              </label>
+              <div class="input-group">
+                <input
+                        type="text"
+                        ng-model="address"
+                        class="form-control input-lg"
+                        id="search-stores"
+                        placeholder="{{'PUBLIC_BOOKING.MAP.SEARCH_PLACEHOLDER' | translate}}">
+                <span class="input-group-btn">
+                  <button
+                          class="btn btn-primary btn-lg"
+                          type="submit"
+                          title="{{'PUBLIC_BOOKING.MAP.SEARCH_BTN' | translate}}">
+                    <span class="fa fa-search"></span>
+                  </button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-xs-2">
+          <button
+                  ng-show="geolocation_enabled"
+                  bb-track="geolocateButton"
+                  type="button"
+                  class="btn btn-default btn-lg"
+                  title="{{'PUBLIC_BOOKING.MAP.GEOLOCATE_BTN_HEADING' | translate}}"
+                  ng-click="geolocate()">
+            <span class="fa fa-map-marker"></span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-show="loc">
+
+    <h2
+            class="company-map-header"
+            translate="PUBLIC_BOOKING.MAP.SEARCH_RESULT_SUMMARY"
+            translate-values="{results: shownMarkers.length, address: formatted_address}"
+            translate-interpolation="messageformat">
+    </h2>
+
+    <div class="row filter-by-service" ng-show="can_filter_by_service">
+
+      <div class="col-xs-12">
+        <label>
+          <span translate="PUBLIC_BOOKING.MAP.HIDE_STORES_LBL"></span>
+          &nbsp;&nbsp;
+          <input
+                  type="checkbox"
+                  ng-model="filter_by_service"
+                  ng-change="filterByService()"
+          />
+        </label>
+      </div>
+
+    </div>
+
+    <div class="company-map row">
+
+      <div class="bb-map-block col-sm-8 col-sm-push-4">
+
+        <div
+                ng-delayed="ui-map"
+                ng-delayed-value="myMap"
+                ng-delayed-watch="mapReady"
+                ng-delayed-ready="mapLoaded"
+                ui-options="mapOptions"
+                class="map-canvas">
+        </div>
+
+        <div
+                ng-repeat="marker in mapMarkers"
+                ui-map-marker="mapMarkers[$index]"
+                ui-event="{'map-click': 'openMarkerInfo(marker)'}">
+        </div>
+
+        <button
+                ng-show="layout.radio && currentMarker"
+                type="button"
+                ng-click="selectItem()"
+                class="btn btn-primary pull-right"
+                translate="PUBLIC_BOOKING.MAP.CONTINUE">
+        </button>
+
+
+
+        <div
+                ui-map-info-window="myInfoWindow"
+                class="clearfix">
+
+          <p>
+            <strong>{{currentMarker.company.name}}</strong>
+          </p>
+
+          <div ng-show="currentMarker.company.has_service || !can_filter_by_service">
+
+            <p ng-bind-html="currentMarker.company.address | address_multi_line"></p>
+
+
+            <ul>
+              <li ng-show="currentMarker.company.address.phone">
+                <i
+                        class="fa fa-phone"
+                        aria-hidden="true">
+                </i>
+                {{currentMarker.company.address.phone | local_phone_number}}
+
+              </li>
+              <li>
+                <i
+                        class="fa fa-location-arrow"
+                        aria-hidden="true"></i>
+                <span class="distance">
+                    {{currentMarker.distance | distance:1}}
+                  </span>
+              </li>
+            </ul>
+
+          </div>
+
+          <div
+                  ng-show="!currentMarker.company.has_service && can_filter_by_service"
+                  translate="PUBLIC_BOOKING.MAP.SERVICE_UNAVAILABLE"
+                  translate-values="{name: marker.company.service.name}">
+          </div>
+
+          <br/>
+
+          <button
+                  type="button"
+                  ng-click="selectItem(currentMarker.company)"
+                  class="btn btn-primary"
+                  ng-show="currentMarker.company.has_service || !can_filter_by_service && !layout.radio"
+                  translate="PUBLIC_BOOKING.MAP.SELECT_BTN">
+          </button>
+
+        </div>
+      </div>
+
+
+      <div class="bb-company-block col-sm-4 col-sm-pull-8">
+
+        <div
+                uib-accordion
+                close-others="true">
+
+          <div
+                  uib-accordion-group
+                  is-open="marker.is_open"
+                  ng-class="{'expanded': marker.is_open, 'selected': is_selected}"
+                  ng-repeat="marker in shownMarkers"
+                  class="store-body"
+                  ng-click="openMarkerInfo(marker)">
+
+            <div
+                    uib-accordion-heading
+                    class="store-header">
+                <span ng-show="layout.radio">
+                  <i class="fa" ng-class="currentMarker == marker ? 'fa-circle' : 'fa-circle-thin'"></i>
+                </span>
+
+              <span>
+                <strong>{{$index+1}}.</strong>
+                {{marker.company.name}}
+              </span>
+              <span
+                      class="pull-right fa"
+                      ng-class="{'fa-chevron-down': marker.is_open, 'fa-chevron-right': !marker.is_open}">
+              </span>
+            </div>
+
+            <ul
+                    ng-show="marker.company.has_service || !can_filter_by_service"
+                    class="store-details"
+                    ng-click="openMarkerInfo(marker)">
+              <li ng-bind-html="marker.company.address | address_multi_line"></li>
+              <li ng-show="marker.company.address.phone">
+                <i
+                        class="fa fa-phone"
+                        aria-hidden="true">
+                </i>
+                {{marker.company.address.phone | local_phone_number}}
+              </li>
+              <li>
+                <i
+                        class="fa fa-location-arrow"
+                        aria-hidden="true">
+                </i>
+                <span class="distance">
+                  {{marker.distance | distance:1}}
+                </span>
+              </li>
+            </ul>
+
+            <div
+                    ng-show="!marker.company.has_service && can_filter_by_service"
+                    translate="PUBLIC_BOOKING.MAP.STORE_ACCORDION.SERVICE_UNAVAILABLE"
+                    translate-values="{name: marker.company.service.name}">
+            </div>
+
+            <button
+                    type="button"
+                    ng-show="marker.company.has_service || !can_filter_by_service && !layout.radio"
+                    ng-click="selectItem(marker.company)"
+                    class="btn btn-primary pull-right"
+                    translate="PUBLIC_BOOKING.MAP.STORE_ACCORDION.SELECT_BTN">
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+</div>

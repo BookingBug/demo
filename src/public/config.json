@@ -44,7 +44,7 @@
       "deploy_version": false
     },
     "core": {
-      "api_url": "https://eu1.bookingbug.com"
+      "api_url": "https://spaceinvaders.bookingbug.com"
     }
   },
   "staging": {

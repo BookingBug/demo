@@ -1,0 +1,21 @@
+<div class="form-group company-search">
+  <input
+    class="input-lg form-control"
+    name="company-search"
+    ng-change="$bbCompanySearchCtrl.companySearchChanged();"
+    ng-model="$bbCompanySearchCtrl.selectedCompany"
+    placeholder="{{'ADMIN_DASHBOARD.LOGIN_PAGE.SEARCH_CHILD_COMPANIES' | translate}}"
+    aria-label="{{'ADMIN_DASHBOARD.LOGIN_PAGE.SEARCH_CHILD_COMPANIES' | translate}}"
+    required
+    typeahead-template-url="{{$bbCompanySearchCtrl.typeaheadTemplate}}"
+    typeahead-on-select="$bbCompanySearchCtrl.companySelected($item)"
+    typeahead-no-results="$bbCompanySearchCtrl.noResults"
+    typeahead-min-length="$bbCompanySearchCtrl.typeaheadOptions.MIN_LENGTH"
+    typeahead-wait-ms="$bbCompanySearchCtrl.typeaheadOptions.WAIT_MS"
+    uib-typeahead="item.name for item in $bbCompanySearchCtrl.searchCompanies($viewValue)"
+    autocomplete="off"
+  />
+  <p ng-show="$bbCompanySearchCtrl.noResults && $bbCompanySearchCtrl.selectedCompany"
+    class="company-search-no-results"
+    translate="ADMIN_DASHBOARD.LOGIN_PAGE.NO_RESULTS"></p>
+</div>

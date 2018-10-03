@@ -24,6 +24,7 @@ import 'file-loader?name=angular-i18n/[name].[ext]!bookingbug-angular/node_modul
 import config from './main.config';
 import run from './main.run';
 import versionModule from './version/version.module';
+import companySearch from './company-search/company_search.component';
 
 export default angular
     .module('public', [
@@ -32,6 +33,7 @@ export default angular
     ])
     .config(config)
     .run(run)
+    .component('bbCompanySearch', companySearch)
     .name;
 
 
