@@ -1,0 +1,42 @@
+<div class="header">
+
+    <div bb-form-data-store></div>
+
+    <div ng-init="setRoute([
+        {page:'public-booking/_templates/steps/purchase', title: 'Your booking'}
+      ])">
+    </div>
+
+    <impl-nav></impl-nav>
+
+    <div ng-hide="coveredByModal"
+         class="alerts"
+         bb-scroll-to="alert:raised"
+         bb-always-scroll>
+        <div uib-alert
+             ng-repeat="alert in $root.alerts"
+             ng-class="'alert-' + alert.type">
+            <ul>
+                <li ng-bind-html="alert.msg"></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div aria-hidden="{{!isLoaded || coveredByModal}}">
+
+    <div bb-content
+         class="ng-cloak impl-container view-booking"></div>
+    <div bb-display-mode></div>
+
+    <div bb-loading
+         class="bb-loader">
+        <div id="loading_icon">
+            <div id="wait_graphic">&nbsp;</div>
+        </div>
+    </div>
+
+</div>
+
+<impl-footer></impl-footer>

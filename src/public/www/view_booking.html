@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="public" bb-api-url="<%= core.api_url %>">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <script src="./<%= chunks.bookingWidgetDependenciesJS %>" type="text/javascript"></script>
+    <script src="./<%= chunks.bookingWidgetJS %>" type="text/javascript"></script>
+    <link href="./<%= chunks.bookingWidgetCSS %>" type="text/css" media="all" rel="stylesheet"/>
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=places&amp;key=<%= core.google_maps_key %>"></script>
+</head>
+
+<body id="bb">
+
+<div bb-widget="{
+        company_id: qs('companyId') || '<%= core.company_id %>',
+        route_format: '/{page}',
+        template: 'templates/main-steps/main_appointment_view'
+        }" bb-scroll-to="page:loaded">
+</div>
+
+<bb-project-version></bb-project-version>
+
+</body>
+
+</html>
