@@ -37,6 +37,17 @@
       "api_url": "https://apidemo.bookingbug.com"
     }
   },
+  "apidemo-public": {
+    "build": {
+      "uglify": false,
+      "deploy_path": "/api-demo-public/",
+      "deploy_version": false
+    },
+    "core": {
+      "company_id": "37003",
+      "api_url": "https://apidemo.bookingbug.com"
+    }
+  },
   "development": {
     "build": {
       "uglify": false,
