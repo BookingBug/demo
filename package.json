@@ -10,7 +10,7 @@
   },
   "scripts": {
     "i": "rm -rf ./node_modules/bookingbug-angular package-lock.json && npm install --global-style --no-package-lock",
-    "il": "sh ./helpers/local_sdk.sh",
+    "il": "node ./helpers/local_sdk.js",
     "p": "gulp --root public",
     "p-dev": "gulp --root public --env development",
     "p-staging": "gulp --root public --env staging",
